@@ -113,8 +113,6 @@ svg {
   }
 }
 
-
-
 /*utiliti classes  */
 
 .visually-hidden {
@@ -246,4 +244,66 @@ svg {
 
 .text-center {
   text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-x {
+  display: flex;
+  justify-content: center;
+}
+
+.center-y {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation */
+
+.primary-header {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav-wrapper {
+  height: 7.625rem;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  transform: translateY(50%);
+  font-size: var(--fs-500);
+}
+
+.logo span {
+  color: var(--clr-accent);
+}
+
+.primary-navigation {
+  font-size: var(--fs-300);
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+  font-weight: var(--fw-semi-bold);
+}
+
+.nav-list li:last-child {
+  font-weight: var(--fw-bold);
+}
+
+/* Hero */
+.hero__logo {
+  font-size: var(--fs-900);
+}
+
+.hero__logo span {
+  color: var(--clr-accent);
 }
