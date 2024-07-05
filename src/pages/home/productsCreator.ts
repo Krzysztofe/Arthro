@@ -1,3 +1,4 @@
+import { StateProductsNumber } from "./stateProductsNumber";
 import { URL_PRODUCTS } from "../../data/apiKeys";
 import { Helpers } from "../../utils/helpers";
 import { LoadingProductsCreator } from "./loadingProductsCreator";
@@ -5,7 +6,7 @@ import { ProductsPrinter } from "./productsPrinter";
 
 export class ProductsCreator {
   #POSTOptions = {
-    url: `${URL_PRODUCTS}20`,
+    url: `${URL_PRODUCTS}${StateProductsNumber.products}`,
   };
 
   constructor() {

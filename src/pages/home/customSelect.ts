@@ -1,6 +1,7 @@
 import { URL_PRODUCTS } from "./../../data/apiKeys";
 
 import { ReprintProducts } from "./reprintProducts";
+import { StateProductsNumber } from "./stateProductsNumber";
 
 export class CustomSelect {
   #customSelect = document.querySelector(".select");
@@ -42,7 +43,9 @@ export class CustomSelect {
     // const event = new Event("change");
     // this.#customSelect?.dispatchEvent(event);
 
-    selectedValue && new ReprintProducts(selectedValue);
+    if (!selectedValue) return;
+    StateProductsNumber.setProductsNumber(selectedValue);
+    new ReprintProducts(selectedValue);
   }
 
   #addEvents() {
