@@ -281,16 +281,29 @@ button {
   position: relative;
 }
 
+/* Underlines */
+
 @media (min-width: 50em) {
   .underline-nav::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -0.5rem;
     left: 0;
     height: 1px;
     width: 100%;
     background-color: var(--clr-underline);
   }
+}
+
+.underline-primary:after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 7.875rem;
+  background-color: var(--clr-underline);
 }
 
 /* Flex */
