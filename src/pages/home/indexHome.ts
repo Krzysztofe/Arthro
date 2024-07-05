@@ -1,4 +1,5 @@
 import { NavigationToggle } from "./navigationToggle";
+import { PopupProductDetails } from "./popupProductDetails";
 import { ProductsCreator } from "./productsCreator";
 import { Scroll } from "./scroll";
 
@@ -7,6 +8,7 @@ class indexHome {
     new NavigationToggle();
     new Scroll();
     new ProductsCreator();
+    new PopupProductDetails();
   }
 }
 

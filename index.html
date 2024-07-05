@@ -288,20 +288,29 @@
         </div>
       </section>
 
-      <!-- Products -->
-
       <section data-products class="bg-primary">
-        <div class="center">
-          <div>liczba produktów na stronie</div>
-          <select id="country" name="country">
-            <option value="us">United States</option>
-            <option value="ca">Canada</option>
-            <option value="uk">United Kingdom</option>
-            <option value="au">Australia</option>
-            <option value="de">Germany</option>
-          </select>
+        <div class="wrapper">
+          <div class="center">
+            <div>liczba produktów na stronie</div>
+            <select id="country" name="country">
+              <option value="us">United States</option>
+              <option value="ca">Canada</option>
+              <option value="uk">United Kingdom</option>
+              <option value="au">Australia</option>
+              <option value="de">Germany</option>
+            </select>
+          </div>
+
+          <!-- ProductsContainer -->
+          <div
+            id="productsContainer"
+            class="even-columns-5 productsContainer relative"
+          >
+            <div class="center spinnerContainer" id="productsSpinner">
+              <div class="spinner"></div>
+            </div>
+          </div>
         </div>
-        <div class="center"><div class="spinner" id="productsSpinner"></div></div>
       </section>
     </main>
   </body>

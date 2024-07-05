@@ -16,14 +16,15 @@ export class ProductsCreator {
   async #handleChangeInputAmount() {
     const products = await Helpers.fetchData(this.#POSTOptions);
     this.#spinnerEl?.remove();
-    new ProductsPrinter(products)
-
-    console.log("eee", products);
+    new ProductsPrinter(products.data);
   }
 
   #event() {
     const handleScroll = () => {
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      if (
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight
+      ) {
         this.#handleChangeInputAmount();
         window.removeEventListener("scroll", handleScroll);
       }
