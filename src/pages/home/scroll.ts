@@ -13,11 +13,11 @@ export class Scroll {
     const liElems = primaryNavigationEl?.querySelectorAll("li");
 
     liElems?.forEach(elem => {
-      elem.style.color = "black";
+      elem.classList.remove("underline-nav");
     });
 
     if (sectionEl && menuItemEl) {
-      menuItemEl.style.color = "red";
+      menuItemEl.classList.add("underline-nav");
       const elementTop = sectionEl.getBoundingClientRect().top + window.scrollY;
       const offsetTop = elementTop - 122;
 
