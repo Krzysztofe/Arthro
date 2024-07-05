@@ -5,6 +5,13 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap"
       rel="stylesheet"
     />
@@ -24,12 +31,12 @@
           </div>
 
           <button
-            class="moble-nav-toggle"
+            class="mobile-nav-toggle"
             aria-controls="primary-navigation"
             aria-expanded="false"
           >
-            <i class="fa-solid fa-bars icon-hamburger"></i>
-            <i class="fa-solid fa-xmark icon-xmark"></i>
+            <i class="fa-solid fa-bars icon-hamburger cursor-pointer"></i>
+            <i class="fa-solid fa-xmark icon-xmark cursor-pointer"></i>
 
             <span class="visually-hidden">Menu</span>
           </button>
@@ -41,9 +48,18 @@
               class="nav-list"
               id="primary-navigation"
             >
-              <li id="hero">TO NAS WYRÓŻNIA</li>
-              <li id="composition">SKŁAD</li>
-              <li id="products">PRODUKTY</li>
+              <li
+                class="navList__item cursor-pointer relative underline"
+                id="hero"
+              >
+                TO NAS WYRÓŻNIA
+              </li>
+              <li class="navList__item cursor-pointer" id="composition">
+                SKŁAD
+              </li>
+              <li class="navList__item cursor-pointer" id="products">
+                PRODUKTY
+              </li>
             </ul>
           </nav>
         </div>
@@ -53,8 +69,9 @@
     <!-- Main -->
 
     <main>
+      <section class="headerSpacer"></section>
       <!-- Hero -->
-      <section class="padding-block-900">
+      <section class="padding-block-900 bg-primary">
         <div class="wrapper">
           <div class="even-columns">
             <div class="">
@@ -65,7 +82,7 @@
               <h1 class="hero__logo">
                 ARTHROHARD
               </h1>
-              <p>
+              <p class="subtitle-gradient">
                 Lab-V Arthrohard Preparat
                 <br />
                 na wsparcie stawów dla psa i kota
@@ -76,6 +93,8 @@
               </p>
 
               <button class="button">Kup teraz</button>
+              <div class="drops"></div>
+              <!-- <img src="./public/Vector.png" alt="plama" /> -->
             </div>
           </div>
         </div>
@@ -83,7 +102,7 @@
 
       <!-- Composition -->
 
-      <section class="padding-block-900">
+      <section class="padding-block-900 bg-primary">
         <div class="wrapper">
           <div class="header-gredient text-center">
             Co wyróżnia nasz preparat
@@ -117,10 +136,16 @@
                 <div class="text-center">Wygoda -</div>
                 <div class="text-center">dwa sposoby podawania</div>
               </div>
-              <div>
+              <div class="center-y">
+                <div class="circle-number center">1</div>
                 Bezpośrednio do pyszczka
               </div>
-              <div>Zmieszany z karmą</div>
+
+              <div class="center-y">
+                <div class="circle-number center">2</div>
+                Zmieszany z karmą
+              </div>
+
               <img class="margin-auto" src="public/Frame 126.png" alt="Psy" />
             </div>
 
@@ -180,31 +205,27 @@
 
               <div>
                 <div class="header-sm">
-                  <div class="text-center">Siarczan glukozaminy</div>
-                  <div class="text-center">650 mg</div>
+                  <div class="text-center">Siarczan chondroityny</div>
+                  <div class="text-center">300 mg</div>
                 </div>
                 <div class="text-center">
-                  Glukozamina jest naturalnym składnikiem chrząstki. Dodatek
-                  glukozaminy przyczynia się do zwiększenia produkcji
-                  glikozaminoglikanów (m.in. siarczanu keratanu, heparanu, kwasu
-                  hialuronowego), które pomagają w odbudowie chrząstki, co jest
-                  szczególnie korzystne dla zwierząt ze zmianami
-                  zwyrodnieniowymi stawów.
+                  Chondroityna, podobnie jak glukozamina, jest składnikiem
+                  chrząstki. Chondroityna pomaga zwalczać enzymy, które niszczą
+                  chrząstkę, a także pomaga chrząstce zatrzymać wodę, co jest
+                  ważne dla jej sprężystości i absorpcji wstrząsów.
                 </div>
               </div>
 
               <div>
                 <div class="header-sm">
-                  <div class="text-center">Siarczan glukozaminy</div>
-                  <div class="text-center">650 mg</div>
+                  <div class="text-center">Kwas hialuronowy</div>
+                  <div class="text-center">50 mg</div>
                 </div>
                 <div class="text-center">
-                  Glukozamina jest naturalnym składnikiem chrząstki. Dodatek
-                  glukozaminy przyczynia się do zwiększenia produkcji
-                  glikozaminoglikanów (m.in. siarczanu keratanu, heparanu, kwasu
-                  hialuronowego), które pomagają w odbudowie chrząstki, co jest
-                  szczególnie korzystne dla zwierząt ze zmianami
-                  zwyrodnieniowymi stawów.
+                  Kwas hialuronowy jest kluczowym składnikiem płynu stawowego,
+                  który działa jak smar i amortyzator dla stawów. Suplementacja
+                  kwasem hialuronowym może pomóc w utrzymaniu prawidłowej
+                  objętości i konsystencji płynu stawowego.
                 </div>
               </div>
             </div>
@@ -212,6 +233,7 @@
             <!-- Second -->
             <div class="flow">
               <img src="public/sad 1.png" alt="Strzykawka" class="center-y" />
+              <button class="margin-auto">Kup teraz</button>
             </div>
 
             <!-- Third -->
@@ -220,50 +242,59 @@
               <div>
                 <div class="circle margin-auto"></div>
                 <div class="header-sm">
-                  <div class="text-center">Siarczan glukozaminy</div>
-                  <div class="text-center">650 mg</div>
+                  <div class="text-center">Czarci pazur</div>
+                  <div class="text-center">250 mg</div>
                 </div>
                 <div class="text-center">
-                  Glukozamina jest naturalnym składnikiem chrząstki. Dodatek
-                  glukozaminy przyczynia się do zwiększenia produkcji
-                  glikozaminoglikanów (m.in. siarczanu keratanu, heparanu, kwasu
-                  hialuronowego), które pomagają w odbudowie chrząstki, co jest
-                  szczególnie korzystne dla zwierząt ze zmianami
-                  zwyrodnieniowymi stawów.
+                  Czarci pazur jest rośliną, która ma właściwości przeciwzapalne
+                  i przeciwbólowe. Może to pomóc zwierzętom, które doświadczają
+                  bólu i stanu zapalnego związanego z problemami ze stawami.
                 </div>
               </div>
 
               <div>
                 <div class="header-sm">
-                  <div class="text-center">Siarczan glukozaminy</div>
-                  <div class="text-center">650 mg</div>
+                  <div class="text-center">Witamina C</div>
+                  <div class="text-center">50 mg</div>
                 </div>
                 <div class="text-center">
-                  Glukozamina jest naturalnym składnikiem chrząstki. Dodatek
-                  glukozaminy przyczynia się do zwiększenia produkcji
-                  glikozaminoglikanów (m.in. siarczanu keratanu, heparanu, kwasu
-                  hialuronowego), które pomagają w odbudowie chrząstki, co jest
-                  szczególnie korzystne dla zwierząt ze zmianami
-                  zwyrodnieniowymi stawów.
+                  Witamina C jest potężnym przeciwutleniaczem, który może pomóc
+                  w ochronie stawów poprzez neutralizację wolnych rodników,
+                  które mogą uszkadzać chrząstkę. Ponadto, witamina C odgrywa
+                  ważną rolę w produkcji kolagenu, kluczowego składnika
+                  chrząstki.
                 </div>
               </div>
 
               <div>
                 <div class="header-sm">
-                  <div class="text-center">Siarczan glukozaminy</div>
-                  <div class="text-center">650 mg</div>
+                  <div class="text-center">MSM</div>
+                  <div class="text-center">250 mg</div>
                 </div>
                 <div class="text-center">
-                  Glukozamina jest naturalnym składnikiem chrząstki. Dodatek
-                  glukozaminy przyczynia się do zwiększenia produkcji
-                  glikozaminoglikanów (m.in. siarczanu keratanu, heparanu, kwasu
-                  hialuronowego), które pomagają w odbudowie chrząstki, co jest
-                  szczególnie korzystne dla zwierząt ze zmianami
-                  zwyrodnieniowymi stawów.
+                  Metylosulfonylometan, czyli MSM, to naturalny związek siarki,
+                  który pomaga w utrzymaniu zdrowych stawów poprzez zmniejszenie
+                  stanu zapalnego i bólu. MSM może również pomagać w produkcji
+                  kolagenu, co przyczynia się do zdrowia chrząstki stawowej.
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- Products -->
+
+      <section data-products class="bg-primary">
+        <div class="center">
+          <div>liczba produktów na stronie</div>
+          <select id="country" name="country">
+            <option value="us">United States</option>
+            <option value="ca">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="au">Australia</option>
+            <option value="de">Germany</option>
+          </select>
         </div>
       </section>
     </main>

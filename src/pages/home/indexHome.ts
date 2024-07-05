@@ -1,22 +1,11 @@
-class Scroll {
-  #btnHero = document.getElementById("hero");
-  #btnComposition = document.getElementById("composition");
-  #btnProducts = document.getElementById("products");
-  #sectionComposition = document.querySelector("[data-composition]");
+import { NavigationToggle } from "./navigationToggle";
+import { Scroll } from "./scroll";
 
+class indexHome {
   constructor() {
-    this.#scrollEvent();
-  }
-  #handleScroll() {
-    this.#sectionComposition?.scrollIntoView({ behavior: "smooth" });
-  }
-
-  #scrollEvent() {
-    this.#btnComposition?.addEventListener(
-      "click",
-      this.#handleScroll.bind(this)
-    );
+    new NavigationToggle();
+    new Scroll();
   }
 }
 
-new Scroll();
+new indexHome();
