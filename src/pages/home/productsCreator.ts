@@ -1,10 +1,9 @@
 import { URL_PRODUCTS } from "../../data/apiKeys";
 import { Helpers } from "../../utils/helpers";
+import { LoadingProductsCreator } from "./loadingProductsCreator";
 import { ProductsPrinter } from "./productsPrinter";
 
 export class ProductsCreator {
-  #spinnerEl = document.getElementById("productsSpinner");
-
   #POSTOptions = {
     url: `${URL_PRODUCTS}20`,
   };
@@ -14,13 +13,18 @@ export class ProductsCreator {
   }
 
   async #handleChangeInputAmount() {
+    const loader = new LoadingProductsCreator("#productsWrapper");
+    loader.createSpinner();
     const products = await Helpers.fetchData(this.#POSTOptions);
-    this.#spinnerEl?.remove();
     new ProductsPrinter(products.data);
+    loader.removeSpinner();
   }
 
   #event() {
     const handleScroll = () => {
+      const productsContainerEL = document.getElementById("productsContainer");
+      if (productsContainerEL) return;
+
       if (
         window.innerHeight + window.scrollY >=
         document.documentElement.scrollHeight
