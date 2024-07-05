@@ -292,23 +292,42 @@
         <div class="wrapper">
           <div class="center">
             <div>liczba produktów na stronie</div>
-            <select id="country" name="country">
-              <option value="us">United States</option>
-              <option value="ca">Canada</option>
-              <option value="uk">United Kingdom</option>
-              <option value="au">Australia</option>
-              <option value="de">Germany</option>
-            </select>
+
+            <!-- select -->
+            <div class="select-conteiner">
+              <div class="select">
+                <div class="select-trigger">
+                  <span data-value="20">20</span>
+                  <div class="arrow"></div>
+                </div>
+                <div class="options">
+                  <div class="option" data-value="20">
+                    20
+                  </div>
+                  <div class="option" data-value="50">
+                    50
+                  </div>
+                  <div class="option" data-value="100">
+                    100
+                  </div>
+                  <div class="option" data-value="200">
+                    200
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- ProductsContainer -->
-          <div
-            id="productsContainer"
-            class="even-columns-5 productsContainer relative"
-          >
-            <div class="center spinnerContainer" id="productsSpinner">
+          <div id="productsWrapper" class="productsWrapper">
+            <!-- <div
+              id="productsContainer"
+              class="even-columns-5 productsContainer relative"
+            > -->
+              <!-- <div class="center spinnerContainer" id="productsSpinner">
               <div class="spinner"></div>
-            </div>
+            </div> -->
+            <!-- </div> -->
           </div>
         </div>
       </section>

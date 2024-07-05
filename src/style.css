@@ -528,9 +528,76 @@ button {
 }
 
 /* Products */
+
+.select-container {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+}
+
+.select {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.select-trigger {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.select-trigger .arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #333;
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  z-index: 99;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+}
+
+.select.open .options {
+  max-height: 150px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.option {
+  padding: 0.25rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.option:hover {
+  background: var(--clr-accent)
+}
+
+
+
 .spinner {
-  border: 8px solid #f3f3f3; /* Light grey */
-  border-top: 8px solid var(--clr-accent); /* Blue */
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid var(--clr-accent); 
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -546,7 +613,7 @@ button {
   }
 }
 
-.productsContainer {
+.productsWrapper {
   min-height: 30rem;
 }
 

@@ -1,12 +1,13 @@
-import { ModelProduct } from './../../sharedModels/modelProduct';
+import { ModelProduct } from "./../../sharedModels/modelProduct";
 
 export class ProductsPrinter {
   #products: ModelProduct[] | null = null;
-  #productsContainerEl = document.getElementById("productsContainer");
+  #productsWrapperEl = document.getElementById("productsWrapper");
+  #productsContainerEl = document.createElement("div");
 
   constructor(products: ModelProduct[]) {
     this.#products = products;
-    this.#createProductsElems();
+    this.#createProductsContainer();
   }
 
   #createProductsElems() {
@@ -19,5 +20,15 @@ export class ProductsPrinter {
       divEl.classList.add("product-container", "center", "cursor-pointer");
       this.#productsContainerEl?.append(divEl);
     });
+  }
+  #createProductsContainer() {
+    this.#productsContainerEl.id = "productsContainer";
+    this.#productsContainerEl.classList.add(
+      "even-columns-5",
+      "productsContainer",
+      "relative"
+    );
+    this.#productsWrapperEl?.append(this.#productsContainerEl);
+    this.#createProductsElems();
   }
 }
