@@ -1,17 +1,24 @@
 export class Scroll {
-  #btnHero = document.getElementById("hero");
-  #btnComposition = document.getElementById("composition");
-  #btnProducts = document.getElementById("products");
-  #sectionComposition = document.querySelector("[data-composition]");
+  #primaryNavEl = document.getElementById("primary-navigation");
 
   constructor() {
     this.#scrollEvent();
   }
 
-  #handleScroll() {
-    if (this.#sectionComposition) {
-      const elementTop =
-        this.#sectionComposition.getBoundingClientRect().top + window.scrollY;
+  #handleScroll(e: Event) {
+    const id = (e.target as HTMLElement).id;
+    const menuItemEl = document.getElementById(id);
+    const sectionEl = document.querySelector(`[data-${id}]`);
+    const primaryNavigationEl = document.getElementById("primary-navigation");
+    const liElems = primaryNavigationEl?.querySelectorAll("li");
+
+    liElems?.forEach(elem => {
+      elem.style.color = "black";
+    });
+
+    if (sectionEl && menuItemEl) {
+      menuItemEl.style.color = "red";
+      const elementTop = sectionEl.getBoundingClientRect().top + window.scrollY;
       const offsetTop = elementTop - 122;
 
       window.scrollTo({
@@ -22,7 +29,7 @@ export class Scroll {
   }
 
   #scrollEvent() {
-    this.#btnComposition?.addEventListener(
+    this.#primaryNavEl?.addEventListener(
       "click",
       this.#handleScroll.bind(this)
     );
