@@ -1,1 +1,1 @@
-export const URL_PRODUCTS = "https://brandstestowy.smallhost.pl/api/random?pageNumber=1&pageSize="
+export const URL_PRODUCTS = import.meta.env.VITE_URL_PRODUCTS;

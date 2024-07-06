@@ -21,7 +21,7 @@ export class ReprintProducts {
     const loader = new LoadingProductsCreator("#productsWrapper");
     loader.createSpinner();
     const products = await Helpers.fetchData(this.#POSTOptions());
-    new ProductsPrinter(products.data);
+    products && new ProductsPrinter(products.data);
     loader.removeSpinner();
   }
 }

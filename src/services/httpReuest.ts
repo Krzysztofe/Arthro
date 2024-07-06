@@ -1,3 +1,5 @@
+import { LoadingProductsCreator } from "../pages/home/loadingProductsCreator";
+
 type ModelObjectString = {
   [key: string]: string;
 };
@@ -15,19 +17,10 @@ export class HttpRequest {
     if (!body) return;
     const errorContainer = document.createElement("div");
     errorContainer.innerText = "Błąd. Ponów próbę";
-    errorContainer.classList.add(
-      "grid",
-      "place-content-center",
-      "h-screen",
-      "bg-white_opacity",
-      "text-danger",
-      "fixed",
-      "top-0",
-      "left-0",
-      "right-0"
-    );
+    errorContainer.classList.add("http-error", "center");
     errorContainer.style.zIndex = "60";
     body?.prepend(errorContainer);
+    document.querySelector("body")?.classList.add("overflowY-hidden");
   };
 
   async sendRequest({

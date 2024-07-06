@@ -1,5 +1,3 @@
-import { URL_PRODUCTS } from "./../../data/apiKeys";
-
 import { ReprintProducts } from "./reprintProducts";
 import { StateProductsNumber } from "./stateProductsNumber";
 
@@ -7,8 +5,7 @@ export class CustomSelect {
   #customSelect = document.querySelector(".select");
   #triggerEl = document.querySelector(".select-trigger");
   #optionsElems = document.querySelectorAll(".option");
-
-  #productsElems = document.getElementById("productsContainer");
+  #iconEl = document.querySelector(".fa-chevron-down");
 
   constructor() {
     this.#addEvents();
@@ -17,11 +14,13 @@ export class CustomSelect {
   #handleCloseSelect(e: Event) {
     if (!this.#customSelect?.contains(e.target as HTMLElement)) {
       this.#customSelect?.classList.remove("open");
+      this.#iconEl?.classList.remove("rotate-180");
     }
   }
 
   #handleToggleSelect() {
     this.#customSelect?.classList.toggle("open");
+    this.#iconEl?.classList.toggle("rotate-180");
   }
 
   async #handleSelectOption(e: Event) {
@@ -42,6 +41,7 @@ export class CustomSelect {
     this.#customSelect?.classList.remove("open");
     // const event = new Event("change");
     // this.#customSelect?.dispatchEvent(event);
+    this.#iconEl?.classList.remove("rotate-180");
 
     if (!selectedValue) return;
     StateProductsNumber.setProductsNumber(selectedValue);

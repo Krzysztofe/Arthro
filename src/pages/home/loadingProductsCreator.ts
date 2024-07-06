@@ -6,7 +6,6 @@ export class LoadingProductsCreator {
     this.#parentEl = document.querySelector(parentRef);
   }
   createSpinner() {
-    console.log("eee");
     this.#spinner = document.createElement("div");
     this.#spinner.id = "productsSpinner";
     this.#spinner.classList.add("center", "spinnerContainer");

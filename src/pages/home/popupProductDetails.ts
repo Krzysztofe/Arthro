@@ -2,7 +2,7 @@ import { ModelProduct } from "../../sharedModels/modelProduct";
 
 export class PopupProductDetails {
   #bodyEl = document.querySelector("body");
-  #productsContainerEl = document.getElementById("productsContainer");
+  #productsContainerEl = document.getElementById("productsWrapper");
   #xmarkEL = document.createElement("i");
   #innerContainerEl = document.createElement("div");
   #popupContainerEl = document.createElement("div");
@@ -47,7 +47,8 @@ export class PopupProductDetails {
     this.#popupContainerEl.classList.add(
       "popupContainer",
       "center",
-      "cursor-pointer"
+      "cursor-pointer",
+      "zIndex-1"
     );
     this.#bodyEl?.append(this.#popupContainerEl);
     this.#createPopupInnerContainer();
@@ -55,11 +56,10 @@ export class PopupProductDetails {
 
   #handlePrintPopup(e: Event) {
     const target = e.target as HTMLElement;
-    const id = target.id;
     const details = target.getAttribute("data-details");
     this.#productDetails = details && JSON.parse(details);
 
-    if (id !== "productsContainer") {
+    if (details) {
       this.#createPopupContainetr();
     }
   }
