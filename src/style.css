@@ -23,6 +23,7 @@
   --size-600: 2rem;
   --size-700: 3rem;
   --size-800: 4rem; */
+  --size-150: 1.5rem;
   --size-500: 5rem;
 
   --ff-primary: "Raleway", sans-serif;
@@ -34,7 +35,9 @@
   --fw-semi-bold: 450;
   --fw-bold: 700;
 
+  --fs-200: 1.3rem;
   --fs-300: 1.6rem;
+  --fs-350: 1.8rem;
   --fs-400: 2rem;
   --fs-450: 2.5rem;
   --fs-500: 3.1rem;
@@ -44,8 +47,8 @@
   /* --fs-900: 10rem; */
 
   --fs-body: var(--fs-300);
-  --fs-secondary-heading: var(--fs-500);
-  --fs-heading-gradient: var(--fs-400);
+  --fs-secondary-heading: var(--fs-400);
+  --fs-heading-gradient: var(--fs-450);
   --fs-nav: var(--fs-300);
   /* --fs-btn: var(--fs-300); */
 }
@@ -53,16 +56,16 @@
 @media (min-width: 650px) {
   :root {
     /* --fs-body: var(--fs-400); */
-    --fs-secondary-heading: var(--fs-500);
+    --fs-secondary-heading: var(--fs-450);
     --fs-heading-gradient: var(--fs-500);
   }
 }
 
 @media (min-width: 800px) {
   :root {
-    --fs-body: var(--fs-400);
-    /* --fs-secondary-heading: var(--fs-500);
-    --fs-heading-gradient: var(--fs-500); */
+    --fs-body: var(--fs-200);
+    --fs-secondary-heading: var(--fs-300);
+    /* --fs-heading-gradient: var(--fs-500); */
   }
 }
 
@@ -217,8 +220,8 @@ button {
   z-index: 7;
 }
 
-.padding-block-900 {
-  padding-block: var(--size-900);
+.padding-block-500 {
+  padding-block: var(--size-500);
 }
 
 .padding-block-700 {
@@ -228,6 +231,10 @@ button {
 .scrollbarGutter {
   scrollbar-gutter: stable;
   padding-right: 1.7rem;
+}
+
+.nonbreaking-space {
+  white-space: nowrap;
 }
 
 .wrapper {
@@ -277,7 +284,7 @@ button {
 
 .even-columns {
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .even-columns-5 {
@@ -333,6 +340,25 @@ button {
   position: relative;
 }
 
+.column-container {
+  display: flex;
+  flex-direction: column;
+   margin-inline: 1rem;
+}
+
+@media (min-width: 800px) {
+  .column-container {
+    margin-inline: 0.5rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .column-container {
+    margin-inline: 2rem;
+  }
+}
+
+
 /* Underlines */
 
 @media (min-width: 800px) {
@@ -350,7 +376,7 @@ button {
 .underline-primary:after {
   content: "";
   position: absolute;
-  bottom: -0.5rem;
+  bottom: calc(0px - var(--size-150));
   left: 50%;
   transform: translateX(-50%);
   height: 1px;
@@ -361,7 +387,7 @@ button {
 .underline-content::after {
   content: "";
   position: absolute;
-  bottom: -0.5rem;
+  bottom: calc(0px - var(--size-150));
   left: 0;
   height: 1px;
   width: 100%;
@@ -409,20 +435,46 @@ button {
 .push-right {
   margin-left: auto;
 }
-.flow > * + * {
+/* .flow > * + * {
   margin-top: 3em;
+} */
+
+.margin-bottom-auto {
+  margin-top: auto;
+}
+
+.margin-inline-100 {
+  margin-inline: 1rem;
 }
 
 .margin-auto {
   margin: auto;
 }
 
+.margin-100 {
+  margin: 1rem;
+}
+
+.margin-300 {
+  margin: 3rem;
+}
 .margin-400 {
   margin: 4rem;
+}
+.margin-top-0{
+  margin-top: 0;
 }
 
 .padding-block-300 {
   padding-block: 3rem;
+}
+
+/* .margin-top-300 {
+  margin-top: 3rem;
+} */
+
+.display-block {
+  display: block;
 }
 
 .margin-bottom-150 {
@@ -437,6 +489,10 @@ button {
   margin-bottom: 3.5rem;
 }
 
+.margin-inline-100 {
+  margin-inline: 1rem;
+}
+
 /* Paddings */
 
 .padding-inline-100 {
@@ -445,6 +501,20 @@ button {
 
 .padding-inline-200 {
   padding-inline: 1rem;
+}
+
+.column-elem-width {
+  /* width: 35.7rem; */
+}
+
+@media (min-width: 1350px) {
+  .column-elem-width {
+    width: 36rem;
+  }
+}
+
+.text-semi-bold {
+  font-weight: var(--fw-semi-bold);
 }
 
 /* Navigation */
@@ -510,8 +580,8 @@ button {
   }
 
   .nav-wrapper {
-  justify-content: center;
-}
+    justify-content: center;
+  }
 
   .primary-navigation {
     display: block;
@@ -580,7 +650,7 @@ button {
 .bottles::after {
   content: "";
   position: absolute;
-  width: 35rem;
+  width: 10rem;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -588,14 +658,14 @@ button {
 
 .bottles::before {
   bottom: 10%;
-  left: -42%;
+  left: 1%;
   height: 33%;
   background-image: url("../src/images/bottle/Vector-left.png");
 }
 
 .bottles::after {
   bottom: 9%;
-  right: -35%;
+  right: 8%;
   height: 50%;
   background-image: url("../src/images/bottle/Vector-right.png");
 }
@@ -626,14 +696,14 @@ button {
     width: 35rem;
   }
   .bottles::before {
-    left: -41%;
+    left: -8%;
   }
   .bottles::after {
-    right: -33%;
+    right: 1%;
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1300px) {
   .wrapper-hero {
     padding-block: 6rem;
   }
@@ -645,19 +715,21 @@ button {
     height: 81rem;
     width: 67rem;
   }
+
+  .bottles::before,
+  .bottles::after {
+    width: 22rem;
+  }
+
   .bottles::before {
-    left: -17%;
+    left: -9%;
   }
   .bottles::after {
-    right: -9%;
+    right: 1%;
   }
 }
 
-/* Preparat */
-
-.preparat__columns {
-  margin-block: 5rem;
-}
+/* <!-- Distinguish --> */
 
 .circle-number {
   width: 2.87rem;
