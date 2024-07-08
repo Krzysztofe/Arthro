@@ -2,6 +2,7 @@ import { ModelProduct } from "../../sharedModels/modelProduct";
 
 export class PopupProductDetails {
   #bodyEl = document.querySelector("body");
+  #headerEl = document.querySelector("header");
   #productsContainerEl = document.getElementById("productsWrapper");
   #xmarkEL = document.createElement("i");
   #innerContainerEl = document.createElement("div");
@@ -48,8 +49,11 @@ export class PopupProductDetails {
       "popupContainer",
       "center",
       "cursor-pointer",
-      "zIndex-1"
+      "zIndex-7"
     );
+
+    this.#bodyEl?.classList.add("scrollbarGutter");
+    this.#headerEl?.classList.add("scrollbarGutter");
     this.#bodyEl?.append(this.#popupContainerEl);
     this.#createPopupInnerContainer();
   }
@@ -70,6 +74,9 @@ export class PopupProductDetails {
     if (id === "popupContainer" || id === "xmark") {
       this.#popupContainerEl?.remove();
       this.#bodyEl?.classList.remove("overflowY-hidden");
+
+      this.#bodyEl?.classList.remove("scrollbarGutter");
+      this.#headerEl?.classList.remove("scrollbarGutter");
     }
   }
 

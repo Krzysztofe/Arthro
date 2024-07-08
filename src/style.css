@@ -1,10 +1,12 @@
 :root {
   --clr-accent: rgba(173, 72, 68, 1);
+  --clr-accent-light: rgba(173, 72, 68, 0.5);
   --clr-accent-secondary: rgba(48, 171, 76, 1);
-  --clr-accent-secondary: rgba(48, 171, 76, 1);
+  --clr-accent-secondary-light: rgba(48, 171, 76, 0.5);
+
   --clr-bg: rgb(246, 246, 246);
   --clr-white: rgb(255, 255, 255);
-  --clr-white-opacity: rgba(255, 255, 255, 0.5);
+  --clr-white-opacity: rgba(255, 255, 255, 0.8);
   --clr-black: rgb(0, 0, 0);
   --clr-black-opacity: rgba(0, 0, 0, 0.5);
   --clr-grey-200: rgba(217, 217, 217, 1);
@@ -194,12 +196,21 @@ button {
   z-index: 5;
 }
 
+.zIndex-7 {
+  z-index: 7;
+}
+
 .padding-block-900 {
   padding-block: var(--size-900);
 }
 
 .padding-block-700 {
   padding-block: var(--size-700);
+}
+
+.scrollbarGutter {
+  scrollbar-gutter: stable;
+  padding-right: 1.7rem;
 }
 
 .wrapper {
@@ -217,6 +228,10 @@ button {
   cursor: auto;
 }
 
+.overflowX-hidden {
+  overflow-x: hidden;
+}
+
 .overflowY-hidden {
   overflow-y: hidden;
 }
@@ -226,6 +241,10 @@ button {
   border: 0;
   border-radius: 0;
   color: var(--clr-white);
+}
+
+.btn-primary:hover {
+  opacity: 0.7;
 }
 
 .rotate-180 {
@@ -645,6 +664,10 @@ button {
   border-radius: 0;
   color: var(--clr-white);
 }
+.select-trigger:hover{
+  background-color: var(--clr-accent-light);
+}
+
 
 .select-trigger .arrow {
   width: 0;
@@ -683,7 +706,7 @@ button {
 }
 
 .option:hover {
-  background: var(--clr-accent);
+  background: var(--clr-accent-light);
 }
 
 /* Products-Spinner */
@@ -731,7 +754,8 @@ button {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--clr-black-opacity);
+  /* background-color: var(--clr-black-opacity); */
+  background-image: linear-gradient(rgba(0 0 0 / 0), rgba(0 0 0 /0.8));
 }
 
 .popupInnerContainer {

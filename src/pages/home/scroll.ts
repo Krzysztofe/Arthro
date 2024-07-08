@@ -1,8 +1,19 @@
+import { Helpers } from "../../utils/helpers";
+
 export class Scroll {
   #primaryNavEl = document.getElementById("primary-navigation");
+  #primaryHeaderEl = document.querySelector(".primary-header");
+  #iconHamburgerEl = document.querySelector(".icon-hamburger") as HTMLElement;
+  #iconXmarkEl = document.querySelector(".icon-xmark") as HTMLElement;
 
   constructor() {
     this.#scrollEvent();
+  }
+
+  #toggleMenu() {
+    this.#primaryNavEl?.toggleAttribute("data-visible");
+    this.#primaryHeaderEl?.toggleAttribute("data-overlay");
+    Helpers.toggleNavcon(this.#iconHamburgerEl, this.#iconXmarkEl);
   }
 
   #handleScroll(e: Event) {
@@ -17,7 +28,9 @@ export class Scroll {
     });
 
     if (sectionEl && menuItemEl) {
+      this.#toggleMenu();
       menuItemEl.classList.add("underline-nav");
+
       const elementTop = sectionEl.getBoundingClientRect().top + window.scrollY;
       const offsetTop = elementTop - 122;
 

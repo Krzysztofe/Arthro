@@ -6,4 +6,16 @@ export class Helpers {
     const request = new HttpRequest();
     return request.sendRequest(requestOptions);
   }
+
+  static toggleNavcon(iconHamburger: HTMLElement, iconXmark: HTMLElement) {
+    if (!iconHamburger || !iconXmark) return;
+
+    if (iconHamburger.style.display === "none") {
+      iconHamburger.style.display = "block";
+      iconXmark.style.display = "none";
+    } else {
+      iconHamburger.style.display = "none";
+      iconXmark.style.display = "block";
+    }
+  }
 }

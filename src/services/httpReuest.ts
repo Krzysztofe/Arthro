@@ -1,8 +1,5 @@
-import { LoadingProductsCreator } from "../pages/home/loadingProductsCreator";
+import { ModelObjectString } from './../sharedModels/modelObjectString';
 
-type ModelObjectString = {
-  [key: string]: string;
-};
 
 type ModelRequestOptions = {
   url: string;

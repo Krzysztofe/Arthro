@@ -5,6 +5,7 @@ import { LoadingProductsCreator } from "./loadingProductsCreator";
 import { ProductsPrinter } from "./productsPrinter";
 
 export class ProductsCreator {
+  #sectionEL = document.getElementById("productsWrapper");
   #POSTOptions = {
     url: `${URL_PRODUCTS}${StateProductsNumber.products}`,
   };
@@ -13,7 +14,14 @@ export class ProductsCreator {
     this.#event();
   }
 
-  async #handleChangeInputAmount() {
+  #isScrollInSection(sectionEl: HTMLElement) {
+    const rect = sectionEl.getBoundingClientRect();
+    const sectionMiddle = rect.top + rect.height / 2;
+    const viewportMiddle = window.innerHeight / 2;
+    return Math.abs(viewportMiddle - sectionMiddle) < rect.height;
+  }
+
+  async #createProducts() {
     const loader = new LoadingProductsCreator("#productsWrapper");
     loader.createSpinner();
     const products = await Helpers.fetchData(this.#POSTOptions);
@@ -21,20 +29,17 @@ export class ProductsCreator {
     loader.removeSpinner();
   }
 
+  #handleScroll = () => {
+    const productsContainerEL = document.getElementById("productsContainer");
+    if (productsContainerEL) return;
+
+    if (this.#sectionEL && this.#isScrollInSection(this.#sectionEL)) {
+      this.#createProducts();
+      window.removeEventListener("scroll", this.#handleScroll);
+    }
+  };
+
   #event() {
-    const handleScroll = () => {
-      const productsContainerEL = document.getElementById("productsContainer");
-      if (productsContainerEL) return;
-
-      if (
-        window.innerHeight + window.scrollY >=
-        document.documentElement.scrollHeight
-      ) {
-        this.#handleChangeInputAmount();
-        window.removeEventListener("scroll", handleScroll);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", this.#handleScroll);
   }
 }
