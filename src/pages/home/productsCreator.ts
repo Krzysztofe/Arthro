@@ -11,7 +11,7 @@ export class ProductsCreator {
   };
 
   constructor() {
-    this.#event();
+    this.#ScrollEvents();
   }
 
   #isScrollInSection(sectionEl: HTMLElement) {
@@ -39,7 +39,8 @@ export class ProductsCreator {
     }
   };
 
-  #event() {
+  #ScrollEvents() {
     window.addEventListener("scroll", this.#handleScroll);
+    window.addEventListener("load", this.#handleScroll);
   }
 }
