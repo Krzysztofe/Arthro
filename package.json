@@ -1,12 +1,12 @@
 {
-  "homepage": "https://krzysztofe.github.io/arthro",
+  "homepage": "https://krzysztofe.github.io/Arthro",
   "name": "arthro",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
