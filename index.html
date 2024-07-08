@@ -11,10 +11,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap"
       rel="stylesheet"
+    /> -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
     />
+
     <link href="./src/style.css" rel="stylesheet" />
     <script type="module" src="/src/pages//home/indexHome.ts" defer></script>
     <title>Arthrohard</title>
@@ -26,10 +32,11 @@
       <div class="wrapper">
         <div class="nav-wrapper center">
           <div class="logo">
-            ARTHOR
-            <span>HARD</span>
+            <img
+              src="/src/images/artrohardLogo/Arthrohard-nav.png"
+              alt="Arthrohard"
+            />
           </div>
-
           <button
             class="mobile-nav-toggle zIndex-1"
             aria-controls="primary-navigation"
@@ -78,34 +85,45 @@
       <section class="headerSpacer"></section>
 
       <!-- Hero -->
-      <section class="padding-block-900 bg-primary">
-        <div class="wrapper">
+      <section class="bg-primary">
+        <div class="wrapper wrapper-hero padding-inline-200">
           <div class="even-columns">
-            <div class="relative bottles overflowX-hidden">
-              <img
-                src="./public/A 2.png"
-                alt="Butelki"
-                class="zIndex-3 relative"
-              />
-            </div>
+           
+              <div class="bottles relative overflowX-hidden margin-auto center">
+                <img
+                  src="/src/images/A 2.png"
+                  alt="Butelki"
+                  class="bottles__img zIndex-3 relative"
+                />
+              </div>
+            
 
-            <div class="flow">
-              <!-- <h1 class="hero__logo fs-primary-heading">
-                ARTHROHARD
-              </h1> -->
-              <p class="subtitle-gradient">
+            <div class="flex-column center-x">
+              <div class="heroLogo__sm margin-bottom-350">
+                <img
+                  src="/src/images/artrohardLogo/Arthrohard-nav.png"
+                  alt="Arthrohard"
+                />
+              </div>
+              <div class="heroLogo__md margin-bottom-350">
+                <img
+                  class=""
+                  src="/src/images/artrohardLogo/Arthrohard -header.png"
+                  alt="Arthrohard"
+                />
+              </div>
+
+              <p class="subtitle-gradient margin-bottom-200">
                 Lab-V Arthrohard Preparat
-                <br />
+                
                 na wsparcie stawów dla psa i kota
               </p>
-              <p>
+              <p class="margin-bottom-150">
                 Arthrohard to dobrze przyswajalny suplement diety w formie
                 syropu, stworzony z myślą o zdrowiu stawów Twojego psa lub kota
               </p>
 
               <button class="btn-primary bg-accent-secondary">Kup teraz</button>
-              <div class="drops"></div>
-              <!-- <img src="./public/Vector.png" alt="plama" /> -->
             </div>
           </div>
         </div>
@@ -137,7 +155,7 @@
 
               <img
                 class="margin-auto"
-                src="public/shutterstock_1770486131 1.png"
+                src="/src/images/photos/shutterstock_1770486131 1.png"
                 alt="kwiat"
               />
             </div>
@@ -159,7 +177,11 @@
                 Zmieszany z karmą
               </div>
 
-              <img class="margin-auto" src="public/Frame 126.png" alt="Psy" />
+              <img
+                class="margin-auto"
+                src="/src/images/photos/Frame 126.png"
+                alt="Psy"
+              />
             </div>
 
             <div class="flow">
@@ -178,7 +200,7 @@
               </div>
 
               <img
-                src="public/shutterstock_2171764885 1.png"
+                src="/src/images/photos/shutterstock_2171764885 1.png"
                 alt="Strzykawka"
                 class="margin-auto"
               />
@@ -259,7 +281,7 @@
             <div class="flow">
               <div class="relative bottle overflowX-hidden">
                 <img
-                  src="public/bottle/sad 1.png"
+                  src="/src/images/bottle/sad 1.png"
                   alt="Butelka"
                   class="center-y"
                 />
@@ -323,7 +345,11 @@
 
           <!-- Dog -->
           <div class="dog width-content margin-auto relative">
-            <img class="dog__img" src="/public/dog/piesek 1.png" alt="Pies" />
+            <img
+              class="dog__img"
+              src="/src/images/dog/piesek 1.png"
+              alt="Pies"
+            />
           </div>
         </div>
       </section>
