@@ -17,7 +17,7 @@ export class ProductsPrinter {
       divEl.innerText = `ID:${id}`;
       divEl.id = id.toString();
       divEl.setAttribute("data-details", JSON.stringify(product));
-      divEl.classList.add("product-container", "center", "cursor-pointer");
+      divEl.classList.add("product-container", "center", "cursor-pointer", "margin-auto");
       this.#productsContainerEl?.append(divEl);
     });
   }
@@ -25,8 +25,8 @@ export class ProductsPrinter {
     this.#productsContainerEl.id = "productsContainer";
     this.#productsContainerEl.classList.add(
       "even-columns-5",
-      "productsContainer",
-      "relative"
+      "relative",
+      "margin-top-500"
     );
     this.#productsWrapperEl?.append(this.#productsContainerEl);
     this.#createProductsElems();

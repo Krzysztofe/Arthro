@@ -17,19 +17,13 @@ export class Scroll {
   }
 
   #handleScroll(e: Event) {
-    const id = (e.target as HTMLElement).id;
-    const menuItemEl = document.getElementById(id);
-    const sectionEl = document.querySelector(`[data-${id}]`);
-    const primaryNavigationEl = document.getElementById("primary-navigation");
-    const liElems = primaryNavigationEl?.querySelectorAll("li");
+    const id = (e.target as HTMLElement).dataset.ref
+    const menuItemEl = id && document.getElementById(id);
+    const sectionEl = id && document.getElementById(id);
 
-    liElems?.forEach(elem => {
-      elem.classList.remove("underline-nav");
-    });
 
     if (sectionEl && menuItemEl) {
       this.#toggleMenu();
-      menuItemEl.classList.add("underline-nav");
 
       const elementTop = sectionEl.getBoundingClientRect().top + window.scrollY;
       const offsetTop = elementTop - 122;

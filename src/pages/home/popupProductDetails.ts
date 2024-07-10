@@ -49,7 +49,8 @@ export class PopupProductDetails {
       "popupContainer",
       "center",
       "cursor-pointer",
-      "zIndex-7"
+      "zIndex-7",
+      "gradient-primary"
     );
 
     this.#bodyEl?.classList.add("scrollbarGutter");
