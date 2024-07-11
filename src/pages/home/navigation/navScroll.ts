@@ -12,8 +12,8 @@ export class NavScroll {
   }
 
   #toggleMenu() {
+    console.log('eee',)
     this.#primaryNavEl?.toggleAttribute("data-visible");
-
     this.#primaryHeaderEl?.toggleAttribute("data-overlay");
     this.#mainEl && (this.#mainEl.style.pointerEvents = "all");
     Helpers.toggleNavcon(this.#iconHamburgerEl, this.#iconXmarkEl);
@@ -30,17 +30,18 @@ export class NavScroll {
       const elementTop = sectionEl.getBoundingClientRect().top + window.scrollY;
       const offsetTop = elementTop - 122;
 
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
+      this.#mainEl &&
+        this.#mainEl.scrollTo({
+          top: offsetTop,
+          behavior: "smooth",
+        });
     }
   }
 
   #scrollEvent() {
     this.#primaryNavEl?.addEventListener(
       "click",
-      this.#handleScroll.bind(this)
+      this.#toggleMenu.bind(this)
     );
   }
 }

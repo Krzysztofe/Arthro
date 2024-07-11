@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/src/style.css" rel="stylesheet" />
+    <script type="module" src="./indexHome.ts" defer></script>
+    <title>Arthrohard</title>
+  </head>
+  <body>
+     <!-- <div class="paralax-wraper"> -->
+    <!-- Header -->
+
+    <header class="primary-header center zIndex-5">
+      <div class="wrapper nav-wrapper center padding-inline-200">
+        <div class="logo">
+          <img
+            loading="lazy"
+            src="/src/images/artrohardLogo/Arthrohard-nav.png"
+            alt="Arthrohard"
+          />
+        </div>
+        <button
+          class="mobile-nav-toggle zIndex-1"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <img
+            src="/src/images/icons/bars-solid.svg"
+            alt="Hamburger"
+            class="icon-hamburger cursor-pointer"
+          />
+          <img
+            src="/src/images/icons/xmark-solid.svg"
+            alt="Krzyżyk"
+            class="icon-xmark cursor-pointer"
+          />
+
+          <span class="visually-hidden">Menu</span>
+        </button>
+
+        <nav class="primary-navigation" id="primary-navigation">
+          <ul
+            aria-label="Primary"
+            role="list"
+            class="nav-list"
+            id="primary-navigation"
+          >
+            <li
+              class="navList__item cursor-pointer relative"
+              data-ref="distinguish"
+            >
+              TO NAS WYRÓŻNIA
+            </li>
+            <li
+              class="navList__item cursor-pointer relative"
+              data-ref="composition"
+            >
+              SKŁAD
+            </li>
+            <li
+              class="navList__item cursor-pointer relative fw-semi-bold"
+              data-ref="products"
+            >
+              PRODUKTY
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  <div class="paralax-wraper">
+      <!-- <section class="headerSpacer"></section> -->
+
+      <!-- Hero -->
+      <section class="bg-primary margin-header">
+        <div class="wrapper wrapper-hero padding-inline-200">
+          <div class="even-columns">
+            <div class="relative width-content margin-auto">
+              <div class="bottles-drop-left"></div>
+              <div class="bottles-drop-right"></div>
+              <div class="bottles margin-auto relative zIndex-1">
+                <img src="/src/images/A 2.png" alt="Butelki" />
+              </div>
+            </div>
+
+            <div class="flex-column center-x margin-bottom-350">
+              <div class="heroLogo__sm margin-bottom-350">
+                <img
+                  src="/src/images/artrohardLogo/Arthrohard-nav.png"
+                  alt="Arthrohard"
+                />
+              </div>
+              <div class="heroLogo__md margin-bottom-350">
+                <img
+                  class=""
+                  src="/src/images/artrohardLogo/Arthrohard -header.png"
+                  alt="Arthrohard"
+                />
+              </div>
+
+              <p class="subtitle-gradient margin-bottom-200">
+                Lab-V Arthrohard Preparat na wsparcie stawów dla psa i kota
+              </p>
+              <p class="margin-bottom-150">
+                Arthrohard to dobrze przyswajalny suplement diety w formie
+                syropu, stworzony z myślą o zdrowiu stawów Twojego psa lub kota
+              </p>
+
+              <button class="btn-primary bg-accent-secondary">Kup teraz</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Distinguish -->
+
+      <section id="distinguish" class="bg-primary" data-distinguish>
+        <div class="wrapper padding-bottom-500">
+          <div class="header-gredient text-center relative underline-primary">
+            Co wyróżnia nasz preparat
+          </div>
+
+          <!-- Columns -->
+
+          <div class="even-columns margin-top-500">
+            <div class="cart-container">
+              <div
+                class="relative underline-primary fs-secondary-heading margin-block-300"
+              >
+                <div class="text-center nonbreaking-space">
+                  Innowacyjny dodatek -
+                </div>
+                <div class="text-center">Czarciego Pazura</div>
+              </div>
+              <p class="text-center margin-bottom-350 margin-auto">
+                Zapewnia dodatkowe wsparcie w zwalczaniu stanów bólowych i
+                zapalnych. Skoncentrowane składniki aktywne, opracowane we
+                współpracy z lekarzami weterynarii, przynoszą szybkie i
+                zauważalne efekty, szczególnie korzystne dla zwierząt z
+                poważnymi problemami stawowymi.
+              </p>
+
+              <div>
+                <div
+                  class="width-content margin-auto relative underline-content"
+                >
+                  <img
+                    src="/src/images/photos/shutterstock_1770486131 1.png"
+                    alt="Kwiat"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="cart-container">
+              <div
+                class="relative underline-primary fs-secondary-heading margin-block-300"
+              >
+                <div class="text-center">Wygoda -</div>
+                <div class="text-center">dwa sposoby podawania</div>
+              </div>
+
+              <div class="margin-auto margin-top-0">
+                <div class="center-y margin-bottom-350">
+                  <div class="circle-number center margin-inline-100">1</div>
+                  Bezpośrednio do pyszczka
+                </div>
+
+                <div class="center-y margin-bottom-350">
+                  <div class="circle-number center margin-inline-100">2</div>
+                  Zmieszany z karmą
+                </div>
+              </div>
+
+              <div
+                class="width-content margin-inline-auto relative underline-content"
+              >
+                <img src="/src/images/photos/Frame 126.png" alt="Psy" />
+              </div>
+            </div>
+
+            <div class="cart-container">
+              <div
+                class="relative underline-primary fs-secondary-heading margin-block-300"
+              >
+                <div class="text-center">Skuteczność -</div>
+                <div class="text-center">skoncentrowana dawka</div>
+              </div>
+              <div class="text-center text-semi-bold">
+                Tylko jedna porcja dziennie.
+              </div>
+              <p class="text-center margin-bottom-350 margin-auto">
+                To nie tylko wygoda, ale również gwarancja, że Twoje zwierzę
+                otrzymuje wszystko, czego potrzebuje, aby cieszyć się zdrowiem i
+                aktywnością na długo. Skorzystaj z zalet Arthrohard i zobacz
+                różnicę w komforcie życia swojego zwierzęcia.
+              </p>
+              <div class="margin-bottom-auto">
+                <div
+                  class="width-content margin-auto relative underline-content"
+                >
+                  <img
+                    src="/src/images/photos/shutterstock_2171764885 1.png"
+                    alt="Strzykawka"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Composition -->
+
+      <section id="composition" class="relative composition" data-composition>
+        <div class="wrapper relative paralax_layer base_layer" id="grup-1">
+          <div class="header-gredient text-center relative underline-primary">
+            Skład w 5 ml
+          </div>
+          <div class="fs-secondary-heading text-center margin-block-900">
+            Co dają poszczególne składniki:
+          </div>
+
+          <!-- Columns -->
+
+          <div class="even-columns">
+            <!-- First Column -->
+
+            <div>
+              <div class="cart-container">
+                <div class="circle margin-auto"></div>
+                <div class="margin-top-200">
+                  <div
+                    class="fs-secondary-heading fw-semi-bold width-content relative underline-content margin-auto"
+                  >
+                    Siarczan glukozaminy
+                  </div>
+                  <div class="text-center margin-top-300 margin-bottom-150">
+                    650 mg
+                  </div>
+                </div>
+                <div class="margin-auto text-center cart-elem-height">
+                  Glukozamina jest naturalnym składnikiem chrząstki. Dodatek
+                  glukozaminy przyczynia się do zwiększenia produkcji
+                  glikozaminoglikanów (m.in. siarczanu keratanu, heparanu, kwasu
+                  hialuronowego), które pomagają w odbudowie chrząstki, co jest
+                  szczególnie korzystne dla zwierząt ze zmianami
+                  zwyrodnieniowymi stawów.
+                </div>
+              </div>
+
+              <div class="cart-container">
+                <div class="circle margin-auto"></div>
+                <div class="margin-top-200">
+                  <div
+                    class="fs-secondary-heading fw-semi-bold width-content relative underline-content margin-auto"
+                  >
+                    Siarczan chondroityny
+                  </div>
+                  <div class="text-center margin-top-300 margin-bottom-150">
+                    300 mg
+                  </div>
+                </div>
+                <div class="margin-auto text-center cart-elem-height">
+                  Chondroityna, podobnie jak glukozamina, jest składnikiem
+                  chrząstki. Chondroityna pomaga zwalczać enzymy, które niszczą
+                  chrząstkę, a także pomaga chrząstce zatrzymać wodę, co jest
+                  ważne dla jej sprężystości i absorpcji wstrząsów.
+                </div>
+              </div>
+
+              <div class="cart-container">
+                <div class="circle margin-auto"></div>
+                <div class="margin-top-200">
+                  <div
+                    class="fs-secondary-heading fw-semi-bold width-content relative underline-content margin-auto"
+                  >
+                    Kwas hialuronowy
+                  </div>
+                  <div class="text-center margin-top-300 margin-bottom-150">
+                    50 mg
+                  </div>
+                </div>
+                <div class="margin-auto text-center cart-elem-height">
+                  Kwas hialuronowy jest kluczowym składnikiem płynu stawowego,
+                  który działa jak smar i amortyzator dla stawów. Suplementacja
+                  kwasem hialuronowym może pomóc w utrzymaniu prawidłowej
+                  objętości i konsystencji płynu stawowego.
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Column -->
+
+            <div class="margin-auto">
+              <div class="relative width-content margin-auto">
+                <div class="bottle-drop-left"></div>
+                <div class="bottle-drop-right"></div>
+                <div class="bottle margin-auto relative zIndex-1">
+                  <img src="/src/images/bottle/sad 1.png" alt="Butelka" />
+                </div>
+              </div>
+
+              <button
+                class="margin-auto btn-primary bg-accent margin-bottom-350"
+              >
+                Kup teraz
+              </button>
+            </div>
+
+            <!-- Third Column -->
+
+            <div>
+              <div class="cart-container">
+                <div class="circle margin-auto"></div>
+                <div class="margin-top-200">
+                  <div
+                    class="fs-secondary-heading fw-semi-bold width-content relative underline-content margin-auto"
+                  >
+                    Czarci pazur
+                  </div>
+                  <div class="text-center margin-top-300 margin-bottom-150">
+                    250 mg
+                  </div>
+                </div>
+                <div class="margin-auto text-center cart-elem-height">
+                  Czarci pazur jest rośliną, która ma właściwości przeciwzapalne
+                  i przeciwbólowe. Może to pomóc zwierzętom, które doświadczają
+                  bólu i stanu zapalnego związanego z problemami ze stawami.
+                </div>
+              </div>
+
+              <div class="cart-container">
+                <div class="circle margin-auto"></div>
+                <div class="margin-top-200">
+                  <div
+                    class="fs-secondary-heading fw-semi-bold width-content relative underline-content margin-auto"
+                  >
+                    Witamina C
+                  </div>
+                  <div class="text-center margin-top-300 margin-bottom-150">
+                    50 mg
+                  </div>
+                </div>
+                <div class="margin-auto text-center cart-elem-height">
+                  Witamina C jest potężnym przeciwutleniaczem, który może pomóc
+                  w ochronie stawów poprzez neutralizację wolnych rodników,
+                  które mogą uszkadzać chrząstkę. Ponadto, witamina C odgrywa
+                  ważną rolę w produkcji kolagenu, kluczowego składnika
+                  chrząstki.
+                </div>
+              </div>
+
+              <div class="cart-container">
+                <div class="circle margin-auto"></div>
+                <div class="margin-top-200">
+                  <div
+                    class="fs-secondary-heading fw-semi-bold width-content relative underline-content margin-auto"
+                  >
+                    MSM
+                  </div>
+                  <div class="text-center margin-top-300 margin-bottom-150">
+                    250 mg
+                  </div>
+                </div>
+                <div class="margin-auto text-center cart-elem-height">
+                  Metylosulfonylometan, czyli MSM, to naturalny związek siarki,
+                  który pomaga w utrzymaniu zdrowych stawów poprzez zmniejszenie
+                  stanu zapalnego i bólu. MSM może również pomagać w produkcji
+                  kolagenu, co przyczynia się do zdrowia chrząstki stawowej.
+                </div>
+              </div>
+            </div>
+          </div>
+
+                 <!-- Dog -->
+          <!-- <div class="relative width-content margin-auto overflow-hidden paralax_layer mid_layer">
+              <div class="dog-drop-left"></div>
+              <div class="dog-drop-right"></div>
+
+              <div class="dog margin-auto relative zIndex-1">
+                  <img src="/src/images/dog/piesek 1.png" alt="Pies" />
+             </div>
+          </div> -->
+
+        </div>
+
+        
+                 <!-- Dog -->
+        <div class="relative width-content margin-inline-auto overflow-hidden paralax_layer mid_layer">
+              <div class="dog-drop-left"></div>
+              <div class="dog-drop-right"></div>
+
+              <div class="dog margin-auto relative zIndex-1">
+                  <img src="/src/images/dog/piesek 1.png" alt="Pies" />
+             </div>
+        </div>
+      
+      </section>
+
+      <section id="products" data-products class="bg-primary">
+        <div class="wrapper wrapper--products">
+          <div class="center">
+            <div class="products-header fs-select">
+              liczba produktów na stronie
+            </div>
+
+            <!-- Custom Select -->
+
+            <div class="select-conteiner">
+              <div class="select">
+                <div class="select-trigger fs-select">
+                  <span data-value="20">20</span>
+                  <img
+                    src="/src/images/icons/chevron-down-solid.svg"
+                    alt="Wskaźnik"
+                    class="margin-inline-100 transition arrow-select"
+                    data-icon-select
+                  />
+                </div>
+                <div class="options transition zIndex-1 fs-select">
+                  <div class="option" data-value="20">
+                    20
+                  </div>
+                  <div class="option" data-value="50">
+                    50
+                  </div>
+                  <div class="option" data-value="100">
+                    100
+                  </div>
+                  <div class="option" data-value="200">
+                    200
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+
+          <!-- ProductsContainer -->
+
+          <div id="productsWrapper" class="productsWrapper relative">
+            <div id="observer" class="productsContainer"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <div class="paralax-wraper">
+        <div class="parallax-grup intro_stren center" id="intro"> header paral</div>
+
+        <div class="even-columns paralax_layer base_layer">
+            <div class="bottle margin-auto relative zIndex-1">
+                  <img src="/src/images/bottle/sad 1.png" alt="Butelka" />
+            </div>
+        </div>
+
+        <div class="relative width-content margin-auto overflow-hidden paralax_layer mid_layer">
+              
+                  <img src="/src/images/dog/piesek 1.png" alt="Pies" />
+        </div>
+        <div class="parallax-grup outro_stren center" id ="autro">end</div>
+      </div> -->
+      
+    
+    </div>
+  </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="./src/style.css" rel="stylesheet" />
+    <script type="module" src="/src/pages//home/indexHome.ts" defer></script>
+    <title>Arthrohard</title>
+  </head>
+  <body>
+     <div class="paralax-wraper">
+    <!-- Header -->
+
+    <header class="primary-header center zIndex-5">
+      <div class="wrapper nav-wrapper center padding-inline-200">
+        <div class="logo">
+          <img
+            loading="lazy"
+            src="/src/images/artrohardLogo/Arthrohard-nav.png"
+            alt="Arthrohard"
+          />
+        </div>
+        <button
+          class="mobile-nav-toggle zIndex-1"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <img
+            src="/src/images/icons/bars-solid.svg"
+            alt="Hamburger"
+            class="icon-hamburger cursor-pointer"
+          />
+          <img
+            src="/src/images/icons/xmark-solid.svg"
+            alt="Krzyżyk"
+            class="icon-xmark cursor-pointer"
+          />
+
+          <span class="visually-hidden">Menu</span>
+        </button>
+
+        <nav class="primary-navigation" id="primary-navigation">
+          <ul
+            aria-label="Primary"
+            role="list"
+            class="nav-list"
+            id="primary-navigation"
+          >
+            <li
+              class="navList__item cursor-pointer relative"
+              data-ref="distinguish"
+            >
+              TO NAS WYRÓŻNIA
+            </li>
+            <li
+              class="navList__item cursor-pointer relative"
+              data-ref="composition"
+            >
+              SKŁAD
+            </li>
+            <li
+              class="navList__item cursor-pointer relative fw-semi-bold"
+              data-ref="products"
+            >
+              PRODUKTY
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+
+    <main>
+      <section class="headerSpacer"></section>
+
+      <!-- Hero -->
+      <section class="bg-primary">
+        <div class="wrapper wrapper-hero padding-inline-200">
+          <div class="even-columns">
+            <div class="relative width-content margin-auto">
+              <div class="bottles-drop-left"></div>
+              <div class="bottles-drop-right"></div>
+              <div class="bottles margin-auto relative zIndex-1">
+                <img src="/src/images/A 2.png" alt="Butelki" />
+              </div>
+            </div>
+
+            <div class="flex-column center-x margin-bottom-350">
+              <div class="heroLogo__sm margin-bottom-350">
+                <img
+                  src="/src/images/artrohardLogo/Arthrohard-nav.png"
+                  alt="Arthrohard"
+                />
+              </div>
+              <div class="heroLogo__md margin-bottom-350">
+                <img
+                  class=""
+                  src="/src/images/artrohardLogo/Arthrohard -header.png"
+                  alt="Arthrohard"
+                />
+              </div>
+
+              <p class="subtitle-gradient margin-bottom-200">
+                Lab-V Arthrohard Preparat na wsparcie stawów dla psa i kota
+              </p>
+              <p class="margin-bottom-150">
+                Arthrohard to dobrze przyswajalny suplement diety w formie
+                syropu, stworzony z myślą o zdrowiu stawów Twojego psa lub kota
+              </p>
+
+              <button class="btn-primary bg-accent-secondary">Kup teraz</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Distinguish -->
+
+      <section id="distinguish" class="bg-primary" data-distinguish>
+        <div class="wrapper padding-bottom-500">
+          <div class="header-gredient text-center relative underline-primary">
+            Co wyróżnia nasz preparat
+          </div>
+
+          <!-- Columns -->
+
+          <div class="even-columns margin-top-500">
+            <div class="cart-container">
+              <div
+                class="relative underline-primary fs-secondary-heading margin-block-300"
+              >
+                <div class="text-center nonbreaking-space">
+                  Innowacyjny dodatek -
+                </div>
+                <div class="text-center">Czarciego Pazura</div>
+              </div>
+              <p class="text-center margin-bottom-350 margin-auto">
+                Zapewnia dodatkowe wsparcie w zwalczaniu stanów bólowych i
+                zapalnych. Skoncentrowane składniki aktywne, opracowane we
+                współpracy z lekarzami weterynarii, przynoszą szybkie i
+                zauważalne efekty, szczególnie korzystne dla zwierząt z
+                poważnymi problemami stawowymi.
+              </p>
+
+              <div>
+                <div
+                  class="width-content margin-auto relative underline-content"
+                >
+                  <img
+                    src="/src/images/photos/shutterstock_1770486131 1.png"
+                    alt="Kwiat"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="cart-container">
+              <div
+                class="relative underline-primary fs-secondary-heading margin-block-300"
+              >
+                <div class="text-center">Wygoda -</div>
+                <div class="text-center">dwa sposoby podawania</div>
+              </div>
+
+              <div class="margin-auto margin-top-0">
+                <div class="center-y margin-bottom-350">
+                  <div class="circle-number center margin-inline-100">1</div>
+                  Bezpośrednio do pyszczka
+                </div>
+
+                <div class="center-y margin-bottom-350">
+                  <div class="circle-number center margin-inline-100">2</div>
+                  Zmieszany z karmą
+                </div>
+              </div>
+
+              <div
+                class="width-content margin-inline-auto relative underline-content"
+              >
+                <img src="/src/images/photos/Frame 126.png" alt="Psy" />
+              </div>
+            </div>
+
+            <div class="cart-container">
+              <div
+                class="relative underline-primary fs-secondary-heading margin-block-300"
+              >
+                <div class="text-center">Skuteczność -</div>
+                <div class="text-center">skoncentrowana dawka</div>
+              </div>
+              <div class="text-center text-semi-bold">
+                Tylko jedna porcja dziennie.
+              </div>
+              <p class="text-center margin-bottom-350 margin-auto">
+                To nie tylko wygoda, ale również gwarancja, że Twoje zwierzę
+                otrzymuje wszystko, czego potrzebuje, aby cieszyć się zdrowiem i
+                aktywnością na długo. Skorzystaj z zalet Arthrohard i zobacz
+                różnicę w komforcie życia swojego zwierzęcia.
+              </p>
+              <div class="margin-bottom-auto">
+                <div
+                  class="width-content margin-auto relative underline-content"
+                >
+                  <img
+                    src="/src/images/photos/shutterstock_2171764885 1.png"
+                    alt="Strzykawka"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Composition -->
+
+      <section id="composition" class="padding-block-400" data-composition>
+        <div class="wrapper parallax-grup relative" id="grup-1">
+          <div class="header-gredient text-center relative underline-primary">
+            Skład w 5 ml
+          </div>
+          <div class="fs-secondary-heading text-center margin-block-900">
+            Co dają poszczególne składniki:
+          </div>
+
+          <!-- Columns -->
+
+          <div class="even-columns paralax_layer base_layer">
+            <!-- First Column -->
+
+            <div>
+              <div class="cart-container">
+                <div class="circle margin-auto"></div>
+                <div class="margin-top-200">
+                  <div
+                    class="fs-secondary-heading fw-semi-bold width-content relative underline-content margin-auto"
+                  >
+                    Siarczan glukozaminy
+                  </div>
+                  <div class="text-center margin-top-300 margin-bottom-150">
+                    650 mg
+                  </div>
+                </div>
+                <div class="margin-auto text-center cart-elem-height">
+                  Glukozamina jest naturalnym składnikiem chrząstki. Dodatek
+                  glukozaminy przyczynia się do zwiększenia produkcji
+                  glikozaminoglikanów (m.in. siarczanu keratanu, heparanu, kwasu
+                  hialuronowego), które pomagają w odbudowie chrząstki, co jest
+                  szczególnie korzystne dla zwierząt ze zmianami
+                  zwyrodnieniowymi stawów.
+                </div>
+              </div>
+
+              <div class="cart-container">
+                <div class="circle margin-auto"></div>
+                <div class="margin-top-200">
+                  <div
+                    class="fs-secondary-heading fw-semi-bold width-content relative underline-content margin-auto"
+                  >
+                    Siarczan chondroityny
+                  </div>
+                  <div class="text-center margin-top-300 margin-bottom-150">
+                    300 mg
+                  </div>
+                </div>
+                <div class="margin-auto text-center cart-elem-height">
+                  Chondroityna, podobnie jak glukozamina, jest składnikiem
+                  chrząstki. Chondroityna pomaga zwalczać enzymy, które niszczą
+                  chrząstkę, a także pomaga chrząstce zatrzymać wodę, co jest
+                  ważne dla jej sprężystości i absorpcji wstrząsów.
+                </div>
+              </div>
+
+              <div class="cart-container">
+                <div class="circle margin-auto"></div>
+                <div class="margin-top-200">
+                  <div
+                    class="fs-secondary-heading fw-semi-bold width-content relative underline-content margin-auto"
+                  >
+                    Kwas hialuronowy
+                  </div>
+                  <div class="text-center margin-top-300 margin-bottom-150">
+                    50 mg
+                  </div>
+                </div>
+                <div class="margin-auto text-center cart-elem-height">
+                  Kwas hialuronowy jest kluczowym składnikiem płynu stawowego,
+                  który działa jak smar i amortyzator dla stawów. Suplementacja
+                  kwasem hialuronowym może pomóc w utrzymaniu prawidłowej
+                  objętości i konsystencji płynu stawowego.
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Column -->
+
+            <div class="margin-auto">
+              <div class="relative width-content margin-auto">
+                <div class="bottle-drop-left"></div>
+                <div class="bottle-drop-right"></div>
+                <div class="bottle margin-auto relative zIndex-1">
+                  <img src="/src/images/bottle/sad 1.png" alt="Butelka" />
+                </div>
+              </div>
+
+              <button
+                class="margin-auto btn-primary bg-accent margin-bottom-350"
+              >
+                Kup teraz
+              </button>
+            </div>
+
+            <!-- Third Column -->
+
+            <div>
+              <div class="cart-container">
+                <div class="circle margin-auto"></div>
+                <div class="margin-top-200">
+                  <div
+                    class="fs-secondary-heading fw-semi-bold width-content relative underline-content margin-auto"
+                  >
+                    Czarci pazur
+                  </div>
+                  <div class="text-center margin-top-300 margin-bottom-150">
+                    250 mg
+                  </div>
+                </div>
+                <div class="margin-auto text-center cart-elem-height">
+                  Czarci pazur jest rośliną, która ma właściwości przeciwzapalne
+                  i przeciwbólowe. Może to pomóc zwierzętom, które doświadczają
+                  bólu i stanu zapalnego związanego z problemami ze stawami.
+                </div>
+              </div>
+
+              <div class="cart-container">
+                <div class="circle margin-auto"></div>
+                <div class="margin-top-200">
+                  <div
+                    class="fs-secondary-heading fw-semi-bold width-content relative underline-content margin-auto"
+                  >
+                    Witamina C
+                  </div>
+                  <div class="text-center margin-top-300 margin-bottom-150">
+                    50 mg
+                  </div>
+                </div>
+                <div class="margin-auto text-center cart-elem-height">
+                  Witamina C jest potężnym przeciwutleniaczem, który może pomóc
+                  w ochronie stawów poprzez neutralizację wolnych rodników,
+                  które mogą uszkadzać chrząstkę. Ponadto, witamina C odgrywa
+                  ważną rolę w produkcji kolagenu, kluczowego składnika
+                  chrząstki.
+                </div>
+              </div>
+
+              <div class="cart-container">
+                <div class="circle margin-auto"></div>
+                <div class="margin-top-200">
+                  <div
+                    class="fs-secondary-heading fw-semi-bold width-content relative underline-content margin-auto"
+                  >
+                    MSM
+                  </div>
+                  <div class="text-center margin-top-300 margin-bottom-150">
+                    250 mg
+                  </div>
+                </div>
+                <div class="margin-auto text-center cart-elem-height">
+                  Metylosulfonylometan, czyli MSM, to naturalny związek siarki,
+                  który pomaga w utrzymaniu zdrowych stawów poprzez zmniejszenie
+                  stanu zapalnego i bólu. MSM może również pomagać w produkcji
+                  kolagenu, co przyczynia się do zdrowia chrząstki stawowej.
+                </div>
+              </div>
+            </div>
+          </div>
+
+                 <!-- Dog -->
+          <div class="relative width-content margin-auto overflow-hidden paralax_layer mid_layer">
+              <div class="dog-drop-left"></div>
+              <div class="dog-drop-right"></div>
+
+              <div class="dog margin-auto relative zIndex-1">
+                  <img src="/src/images/dog/piesek 1.png" alt="Pies" />
+             </div>
+          </div>
+
+        </div>
+      
+      </section>
+
+      <section id="products" data-products class="bg-primary">
+        <div class="wrapper wrapper--products">
+          <div class="center">
+            <div class="products-header fs-select">
+              liczba produktów na stronie
+            </div>
+
+            <!-- Custom Select -->
+
+            <div class="select-conteiner">
+              <div class="select">
+                <div class="select-trigger fs-select">
+                  <span data-value="20">20</span>
+                  <img
+                    src="/src/images/icons/chevron-down-solid.svg"
+                    alt="Wskaźnik"
+                    class="margin-inline-100 transition arrow-select"
+                    data-icon-select
+                  />
+                </div>
+                <div class="options transition zIndex-1 fs-select">
+                  <div class="option" data-value="20">
+                    20
+                  </div>
+                  <div class="option" data-value="50">
+                    50
+                  </div>
+                  <div class="option" data-value="100">
+                    100
+                  </div>
+                  <div class="option" data-value="200">
+                    200
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+
+          <!-- ProductsContainer -->
+
+          <!-- <div id="productsWrapper" class="productsWrapper relative">
+            <div id="observer" class="productsContainer"></div>
+          </div>
+        </div> -->
+      </section>
+
+      <div class="paralax-wraper">
+        <div class="parallax-grup intro_stren center" id="intro"> header paral</div>
+
+        <div class="even-columns paralax_layer base_layer">
+            <div class="bottle margin-auto relative zIndex-1">
+                  <img src="/src/images/bottle/sad 1.png" alt="Butelka" />
+            </div>
+        </div>
+
+        <div class="relative width-content margin-auto overflow-hidden paralax_layer mid_layer">
+              
+                  <img src="/src/images/dog/piesek 1.png" alt="Pies" />
+        </div>
+        <div class="parallax-grup outro_stren center" id ="autro">end</div>
+      </div>
+      
+    </main>
+    </div>
+  </body>
+</html>
+
+   <!-- <div class="paralax-wraper">
+        <div class="parallax-grup intro_stren center" id="intro"> header paral</div>
+
+        <div class="parallax-grup relative" id="grup-1">
+          <div class="paralax_layer center base_layer">base layesr</div>
+           <div class="paralax_layer center mid_layer">mid layer</div>
+        </div>  
+        
+        
+        <div class="parallax-grup outro_stren center" id ="autro">end</div>
+      </div> -->
+
+      <!-- http://localhost:5173/src/pages/home/new.html -->
