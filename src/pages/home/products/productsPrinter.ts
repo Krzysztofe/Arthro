@@ -1,4 +1,4 @@
-import { ModelProduct } from "./../../sharedModels/modelProduct";
+import { ModelProduct } from "../../../sharedModels/modelProduct";
 
 export class ProductsPrinter {
   #products: ModelProduct[] | null = null;
@@ -17,16 +17,22 @@ export class ProductsPrinter {
       divEl.innerText = `ID:${id}`;
       divEl.id = id.toString();
       divEl.setAttribute("data-details", JSON.stringify(product));
-      divEl.classList.add("product-container", "center", "cursor-pointer", "margin-auto");
+      divEl.classList.add(
+        "product-container",
+        "center",
+        "cursor-pointer",
+        "margin-auto"
+      );
       this.#productsContainerEl?.append(divEl);
     });
   }
   #createProductsContainer() {
-    this.#productsContainerEl.id = "productsContainer";
+    // this.#productsContainerEl.id = "productsContainer";
     this.#productsContainerEl.classList.add(
       "even-columns-5",
       "relative",
-      "margin-top-500"
+      "margin-top-500",
+      "productsContainer"
     );
     this.#productsWrapperEl?.append(this.#productsContainerEl);
     this.#createProductsElems();

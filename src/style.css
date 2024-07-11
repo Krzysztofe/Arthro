@@ -11,7 +11,7 @@
   --clr-black-opacity: rgba(0, 0, 0, 0.5);
   --clr-grey-200: rgba(217, 217, 217, 1);
   --clr-grey-400: rgb(190, 190, 190);
-  /* --clr-warning: */
+  --clr-warning: rgb(222, 14, 14);
 
   --clr-underline: rgba(17, 17, 17, 1);
 
@@ -385,25 +385,6 @@ button {
   position: relative;
 }
 
-.cart-container {
-  display: flex;
-  flex-direction: column;
-  padding-inline: 1rem;
-}
-
-@media (min-width: 800px) {
-  .cart-container {
-    /* margin-inline: 0.5rem; */
-    /* padding-inline: 1rem; */
-  }
-}
-
-@media (min-width: 1300px) {
-  .column-container {
-    margin-inline: 2rem;
-  }
-}
-
 /* Underlines */
 
 .underline-nav::after {
@@ -438,7 +419,7 @@ button {
   transition: background-color 0.5s;
 }
 
-.underline-content:hover::after {
+.cart-container:hover .underline-content::after {
   background-color: var(--clr-underline);
 }
 
@@ -504,6 +485,10 @@ button {
 
 .margin-auto {
   margin: auto;
+}
+
+.margin-inline-auto {
+  margin: 0 auto;
 }
 
 .margin-100 {
@@ -578,44 +563,38 @@ button {
   padding-inline: 1rem;
 }
 
-.column-elem-width {
-  width: 28rem;
-}
+/* Cards */
 
 .cart-container {
-  /* display: flex;
-  flex-direction: column; */
-  /* width: 100%; */
-  /* padding-inline: 1rem; */
-  /* margin-inline: 1rem; */
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1rem;
+  width: 80vw;
+  margin: 0 auto;
 }
 
 @media (min-width: 800px) {
-  .column-elem-width {
-    width: 24rem;
+  .cart-container {
+    width: 28vw;
+    max-width: 42rem;
   }
-  .column-elem-height {
+}
+
+@media (min-width: 800px) {
+  .cart-elem-height {
     min-height: 25rem;
   }
 }
 
 @media (min-width: 1000px) {
-  .column-elem-width {
-    width: 28rem;
-  }
-
-  .column-elem-height {
-    min-height: 17rem;
+  .cart-elem-height {
+    min-height: 19rem;
   }
 }
 
 @media (min-width: 1400px) {
-  .column-elem-width {
-    width: 41.7rem;
-  }
-
-  .column-elem-height {
-    min-height: 26rem;
+  .cart-elem-height {
+    min-height: 32rem;
   }
 }
 
@@ -661,7 +640,8 @@ button {
 
 .icon-xmark,
 .icon-hamburger {
-  font-size: var(--fs-500);
+  width: 5rem;
+  height: 5rem;
 }
 
 .nav-list {
@@ -839,8 +819,16 @@ button {
 .circle-number {
   width: 2.87rem;
   height: 2.87rem;
-  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.25);
   border-radius: 100%;
+  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.25);
+  background-color: var(--clr-white);
+}
+
+.circle-number {
+  width: 2.87rem;
+  height: 2.87rem;
+  border-radius: 100%;
+  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.25);
   background-color: var(--clr-white);
 }
 
@@ -953,6 +941,7 @@ button {
   color: var(--clr-white);
 }
 
+
 @media (min-width: 800px) {
   .products-header {
     padding: 1rem 4rem;
@@ -966,21 +955,12 @@ button {
   background-color: var(--clr-accent-light);
 }
 
-/* .select-trigger .arrow {
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid var(--clr-white);
-} */
-
 .options {
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  background: #fff;
-  border: 1px solid #ccc;
+  background-color: var(--clr-white);
   border-top: none;
   border-radius: 0 0 4px 4px;
   overflow: hidden;
@@ -997,7 +977,7 @@ button {
 }
 
 .option {
-  padding: 0.25rem;
+  padding: 0.25rem 1rem;
   cursor: pointer;
   width: 100%;
 }
@@ -1085,7 +1065,8 @@ button {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 1.93rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 /* HTTP error */
@@ -1095,56 +1076,5 @@ button {
   inset: 0;
   background-image: var(--gradient-primary);
   font-size: var(--fs-500);
-  color: red;
-}
-
-.bottlex {
-  /* height: 37rem; */
-  /* width: 16rem; */
-  width: 16vw;
-  aspect-ratio: 1/2;
-}
-
-.kontener {
-  /* position: relative; */
-}
-
-.plama {
-  position: absolute;
-  top: 45%;
-  left: 39%;
-  width: 8vw;
-  aspect-ratio: 1/2;
-}
-
-.bottlex__img {
-  /* height: 100%;
-  width: 100%; */
-  /* object-fit: cover; */
-}
-
-/* .bottlex::before,
-.bottlex::after {
-  content: "";
-  position: absolute;
-  height: 45rem;
-  width: 19rem;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: -1;
-} */
-
-.bottlex::before {
-  bottom: 14%;
-  left: -33%;
-  height: 50%;
-  background-image: url("../src/images/bottle/Vector-right.png");
-}
-
-.bottlex::after {
-  bottom: 30%;
-  right: -38%;
-  height: 40%;
-  background-image: url("../src/images/bottle/Vector-left.png");
+  color: var(--clr-warning);
 }

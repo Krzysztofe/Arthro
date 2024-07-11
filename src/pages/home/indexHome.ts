@@ -1,21 +1,22 @@
 import { CustomSelect } from "./customSelect";
-import { NavUnderlinePrinter } from "./navUnderlinePrinter";
-import { NavigationToggle } from "./navigationToggle";
-import { PopupProductDetails } from "./popupProductDetails";
-import { ProductsCreator } from "./productsCreator";
-import { Scroll } from "./scroll";
+import { NavUnderlinePrinter } from "./navigation/navUnderlinePrinter";
+import { ProductsCreator } from "./products/productsCreator";
+import { NavScroll } from "./navigation/navScroll";
+import { StateReobservEl } from "./states/stateReobservEl";
+import { NavigationToggle } from "./navigation/navigationToggle";
+import { PopupProductDetails } from "./products/popupProductDetails";
 
 class indexHome {
   constructor() {
-    new NavUnderlinePrinter()
+    new NavUnderlinePrinter();
     new NavigationToggle();
-    new Scroll();
+    new NavScroll();
     new CustomSelect();
-    new ProductsCreator();
+    const observ = new ProductsCreator();
+    observ.observeLastElem();
+    StateReobservEl.observRef = observ.reObserveLastElem.bind(observ);
     new PopupProductDetails();
   }
 }
 
 new indexHome();
-
-

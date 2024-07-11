@@ -1,6 +1,6 @@
-import { Helpers } from "../../utils/helpers";
+import { Helpers } from "../../../utils/helpers";
 
-export class Scroll {
+export class NavScroll {
   #primaryNavEl = document.getElementById("primary-navigation");
   #primaryHeaderEl = document.querySelector(".primary-header");
   #iconHamburgerEl = document.querySelector(".icon-hamburger") as HTMLElement;
@@ -17,10 +17,9 @@ export class Scroll {
   }
 
   #handleScroll(e: Event) {
-    const id = (e.target as HTMLElement).dataset.ref
+    const id = (e.target as HTMLElement).dataset.ref;
     const menuItemEl = id && document.getElementById(id);
     const sectionEl = id && document.getElementById(id);
-
 
     if (sectionEl && menuItemEl) {
       this.#toggleMenu();

@@ -1,11 +1,12 @@
-import { ReprintProducts } from "./reprintProducts";
-import { StateProductsNumber } from "./stateProductsNumber";
+import { ReprintProducts } from "./products/reprintProducts";
+import { StatePageNumber } from "./states/statePageNumber";
+import { StateProductsPerPage } from "./states/stateProductsPerPage";
 
 export class CustomSelect {
   #customSelect = document.querySelector(".select");
   #triggerEl = document.querySelector(".select-trigger");
   #optionsElems = document.querySelectorAll(".option");
-  #iconEl = document.querySelector(".fa-chevron-down");
+  #iconEl = document.querySelector("[data-icon-select]");
 
   constructor() {
     this.#addEvents();
@@ -27,7 +28,7 @@ export class CustomSelect {
     const target = e.target as HTMLElement;
     const selectedValue = target.getAttribute("data-value");
     const selectedText = target.innerText;
-    const productsElems = document.getElementById("productsContainer");
+    const productsElems = document.querySelectorAll(".productsContainer");
 
     const spanElement = this.#triggerEl?.querySelector(
       "[data-value]"
@@ -36,15 +37,16 @@ export class CustomSelect {
       spanElement.innerText = selectedText;
     }
 
-    productsElems?.remove();
+    productsElems.forEach((elem, idx) => idx !== 0 && elem.remove());
 
     this.#customSelect?.classList.remove("open");
-    // const event = new Event("change");
-    // this.#customSelect?.dispatchEvent(event);
+
     this.#iconEl?.classList.remove("rotate-180");
 
     if (!selectedValue) return;
-    StateProductsNumber.setProductsNumber(selectedValue);
+
+    StateProductsPerPage.products = selectedValue;
+    StatePageNumber.number = 2;
     new ReprintProducts(selectedValue);
   }
 

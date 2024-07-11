@@ -1,10 +1,10 @@
-import { ModelProduct } from "../../sharedModels/modelProduct";
+import { ModelProduct } from "./../../../sharedModels/modelProduct";
 
 export class PopupProductDetails {
   #bodyEl = document.querySelector("body");
   #headerEl = document.querySelector("header");
   #productsContainerEl = document.getElementById("productsWrapper");
-  #xmarkEL = document.createElement("i");
+  #xmarkEL = document.createElement("img");
   #innerContainerEl = document.createElement("div");
   #popupContainerEl = document.createElement("div");
   #productDetails: null | ModelProduct = null;
@@ -14,12 +14,9 @@ export class PopupProductDetails {
   }
 
   #createIconXmark() {
-    this.#xmarkEL.classList.add(
-      "fa-solid",
-      "fa-xmark",
-      "popupXmark",
-      "cursor-pointer"
-    );
+    this.#xmarkEL.classList.add("popupXmark", "cursor-pointer");
+    this.#xmarkEL.src = "/src/images/icons/xmark-solid.svg";
+    this.#xmarkEL.alt = "Krzyżyk";
     this.#xmarkEL.id = "xmark";
     this.#innerContainerEl?.prepend(this.#xmarkEL);
   }

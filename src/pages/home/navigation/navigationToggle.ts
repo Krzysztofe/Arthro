@@ -1,4 +1,4 @@
-import { Helpers } from "../../utils/helpers";
+import { Helpers } from "../../../utils/helpers";
 
 export class NavigationToggle {
   #primaryHeaderEl = document.querySelector(".primary-header");
@@ -10,8 +10,6 @@ export class NavigationToggle {
   constructor() {
     this.#navToggleEvent();
   }
-
- 
 
   #handleNavToggle() {
     this.#primaryNavEl?.hasAttribute("data-visible")

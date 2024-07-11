@@ -1,7 +1,8 @@
-import { URL_PRODUCTS } from "../../data/apiKeys";
-import { Helpers } from "../../utils/helpers";
+import { URL_PRODUCTS } from "../../../data/apiKeys";
+import { Helpers } from "../../../utils/helpers";
 import { LoadingProductsCreator } from "./loadingProductsCreator";
 import { ProductsPrinter } from "./productsPrinter";
+import { StateReobservEl } from "../states/stateReobservEl";
 
 export class ReprintProducts {
   #pageSize: null | string = null;
@@ -22,6 +23,13 @@ export class ReprintProducts {
     loader.createSpinner();
     const products = await Helpers.fetchData(this.#POSTOptions());
     products && new ProductsPrinter(products.data);
+
+    const sections = document.querySelectorAll(".productsContainer");
+
+    const lastSection = sections.item(sections.length - 1);
+
+    lastSection && StateReobservEl.observRef(lastSection);
+
     loader.removeSpinner();
   }
 }
