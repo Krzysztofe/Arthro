@@ -1,6 +1,7 @@
 import { Helpers } from "../../../utils/helpers";
 
 export class NavScroll {
+  #mainEl = document.querySelector("main");
   #primaryNavEl = document.getElementById("primary-navigation");
   #primaryHeaderEl = document.querySelector(".primary-header");
   #iconHamburgerEl = document.querySelector(".icon-hamburger") as HTMLElement;
@@ -12,7 +13,9 @@ export class NavScroll {
 
   #toggleMenu() {
     this.#primaryNavEl?.toggleAttribute("data-visible");
+
     this.#primaryHeaderEl?.toggleAttribute("data-overlay");
+    this.#mainEl && (this.#mainEl.style.pointerEvents = "all");
     Helpers.toggleNavcon(this.#iconHamburgerEl, this.#iconXmarkEl);
   }
 
