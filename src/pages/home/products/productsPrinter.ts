@@ -27,11 +27,9 @@ export class ProductsPrinter {
     });
   }
   #createProductsContainer() {
-    // this.#productsContainerEl.id = "productsContainer";
     this.#productsContainerEl.classList.add(
-      "even-columns-5",
+      "even-columns-4",
       "relative",
-      "padding-block-100",
       "productsContainer"
     );
     this.#productsWrapperEl?.append(this.#productsContainerEl);

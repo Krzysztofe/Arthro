@@ -1,10 +1,10 @@
 import { ModelProduct } from "./../../../sharedModels/modelProduct";
+import Icon from "../../../images/icons/xmark-solid.svg";
 
 export class PopupProductDetails {
   #bodyEl = document.querySelector("body");
   #headerEl = document.querySelector("header");
   #productsContainerEl = document.getElementById("productsWrapper");
-  #xmarkEL = document.createElement("img");
   #innerContainerEl = document.createElement("div");
   #popupContainerEl = document.createElement("div");
   #productDetails: null | ModelProduct = null;
@@ -13,13 +13,7 @@ export class PopupProductDetails {
     this.#popupEvents();
   }
 
-  #createIconXmark() {
-    this.#xmarkEL.classList.add("popup-xmark", "cursor-pointer");
-    this.#xmarkEL.src = "/src/images/icons/xmark-solid.svg";
-    this.#xmarkEL.alt = "Krzyżyk";
-    this.#xmarkEL.id = "xmark";
-    this.#innerContainerEl?.prepend(this.#xmarkEL);
-  }
+ 
 
   #createPopupInnerContainer() {
     if (!this.#productDetails) return;
@@ -36,12 +30,18 @@ export class PopupProductDetails {
       "padding-100",
       "padding-bottom-200"
     );
-    this.#innerContainerEl.innerHTML = `    
+    this.#innerContainerEl.innerHTML = `  
+     <img id = "xmark"
+             src=${Icon}
+             alt="Krzyżyk"
+             class="popup-xmark cursor-pointer"
+           />
+              
         <div>ID: ${id}</div>
        <div>Nazwa: ${name}</div>
        <div>Wartość: ${value}</div>`;
     this.#popupContainerEl.append(this.#innerContainerEl);
-    this.#createIconXmark();
+    // this.#createIconXmark();
   }
 
   #createPopupContainetr() {
