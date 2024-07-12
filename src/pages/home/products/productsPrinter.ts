@@ -31,7 +31,7 @@ export class ProductsPrinter {
     this.#productsContainerEl.classList.add(
       "even-columns-5",
       "relative",
-      "margin-top-500",
+      "padding-block-100",
       "productsContainer"
     );
     this.#productsWrapperEl?.append(this.#productsContainerEl);

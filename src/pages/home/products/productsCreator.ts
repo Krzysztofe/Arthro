@@ -51,10 +51,9 @@ export class ProductsCreator {
   async #observerCallback(entries: IntersectionObserverEntry[]) {
     entries.forEach(async entry => {
       if (entry.isIntersecting) {
-        this.observer.unobserve(entry.target);
-
         await this.#createProducts(this.#firstGEToptions());
         StatePageNumber.number = StatePageNumber.number + 1;
+        this.observer.unobserve(entry.target);
       }
     });
   }

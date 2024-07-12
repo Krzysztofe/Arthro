@@ -8,9 +8,8 @@ export class LoadingProductsCreator {
   createSpinner() {
     this.#spinner = document.createElement("div");
     this.#spinner.id = "productsSpinner";
-    this.#spinner.classList.add("center", "spinnerContainer", "zIndex-3");
+    this.#spinner.classList.add("center", "spinner-container", "zIndex-3");
     this.#spinner.innerHTML = "<div class='spinner'></div>";
-    // this.#parentEl.style.backgroundColor = "red"
     this.#parentEl?.prepend(this.#spinner);
  
   }

@@ -14,7 +14,7 @@ export class PopupProductDetails {
   }
 
   #createIconXmark() {
-    this.#xmarkEL.classList.add("popupXmark", "cursor-pointer");
+    this.#xmarkEL.classList.add("popup-xmark", "cursor-pointer");
     this.#xmarkEL.src = "/src/images/icons/xmark-solid.svg";
     this.#xmarkEL.alt = "Krzyżyk";
     this.#xmarkEL.id = "xmark";
@@ -27,9 +27,14 @@ export class PopupProductDetails {
 
     this.#innerContainerEl.id = "popupInnerContainer";
     this.#innerContainerEl.classList.add(
-      "popupInnerContainer",
+      "popup-innerContainer",
+      "flex-column",
+      "space-between-x",
       "relative",
-      "cursor-none"
+      "cursor-none",
+      "margin-inline-100",
+      "padding-100",
+      "padding-bottom-200"
     );
     this.#innerContainerEl.innerHTML = `    
         <div>ID: ${id}</div>
@@ -43,15 +48,13 @@ export class PopupProductDetails {
     this.#bodyEl?.classList.add("overflowY-hidden");
     this.#popupContainerEl.id = "popupContainer";
     this.#popupContainerEl.classList.add(
-      "popupContainer",
+      "popup-container",
       "center",
       "cursor-pointer",
       "zIndex-7",
       "gradient-primary"
     );
 
-    this.#bodyEl?.classList.add("scrollbarGutter");
-    this.#headerEl?.classList.add("scrollbarGutter");
     this.#bodyEl?.append(this.#popupContainerEl);
     this.#createPopupInnerContainer();
   }

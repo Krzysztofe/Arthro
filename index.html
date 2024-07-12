@@ -2,15 +2,8 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/public/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    /> -->
 
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&display=swap"
@@ -25,7 +18,7 @@
     <!-- Header -->
 
     <header class="primary-header center zIndex-5">
-      <div class="wrapper nav-wrapper center padding-inline-200">
+      <div class="wrapper wrapper--nav relative center padding-inline-200">
         <div class="logo">
           <img
             loading="lazy"
@@ -60,26 +53,26 @@
             id="primary-navigation"
           >
             <li
-              class="cursor-pointer relative margin-bottom-150"
+              class="cursor-pointer relative margin-block-300"
               data-ref="distinguish"
             >
-              <a href="#distinguish" class="navList__link">
+              <a href="#distinguish" class="nav-link">
                 TO NAS WYRÓŻNIA
               </a>
             </li>
             <li
-              class="navList__item cursor-pointer relative margin-bottom-150"
+              class="navList__item cursor-pointer relative margin-block-300"
               data-ref="composition"
             >
-              <a href="#composition" class="navList__link">
+              <a href="#composition" class="nav-link">
                 SKŁAD
               </a>
             </li>
             <li
-              class="navList__item cursor-pointer relative fw-semi-bold margin-bottom-150"
+              class="navList__item cursor-pointer relative fw-semi-bold margin-block-300"
               data-ref="products"
             >
-              <a href="#products" class="navList__link">
+              <a href="#products" class="nav-link">
                 PRODUKTY
               </a>
             </li>
@@ -93,8 +86,8 @@
     <main class="paralax-wraper">
       <!-- Hero -->
       <section class="bg-primary">
-        <div class="wrapper wrapper-hero padding-inline-200">
-          <div class="even-columns">
+        <div class="wrapper padding-block-100 padding-inline-200">
+          <div class="even-columns margin-top-200">
             <div class="relative width-content margin-auto">
               <div class="bottles-drop-left"></div>
               <div class="bottles-drop-right"></div>
@@ -103,16 +96,18 @@
               </div>
             </div>
 
-            <div class="flex-column center-x margin-bottom-350">
-              <div class="heroLogo__sm margin-bottom-350">
+            <div
+              class="flex-column wrapper-hero-column center-x margin-inline-auto"
+            >
+            <h1 class="visually-hidden">Arthrohard</h1>
+              <div class="logo__sm margin-bottom-350">
                 <img
                   src="/src/images/artrohardLogo/Arthrohard-nav.png"
                   alt="Arthrohard"
                 />
               </div>
-              <div class="heroLogo__md margin-bottom-350">
+              <div class="logo__md margin-bottom-350">
                 <img
-                  class=""
                   src="/src/images/artrohardLogo/Arthrohard -header.png"
                   alt="Arthrohard"
                 />
@@ -126,7 +121,7 @@
                 syropu, stworzony z myślą o zdrowiu stawów Twojego psa lub kota
               </p>
 
-              <button class="btn-primary bg-accent-secondary">
+              <button class="btn-primary bg-accent-secondary margin-bottom-350">
                 Kup teraz
               </button>
             </div>
@@ -136,7 +131,7 @@
 
       <!-- Distinguish -->
 
-      <section id="distinguish" class="bg-primary" data-distinguish>
+      <section id="distinguish" class="bg-primary min-width" data-distinguish>
         <div class="wrapper padding-bottom-500">
           <div class="header-gredient text-center relative underline-primary">
             Co wyróżnia nasz preparat
@@ -217,7 +212,7 @@
                 aktywnością na długo. Skorzystaj z zalet Arthrohard i zobacz
                 różnicę w komforcie życia swojego zwierzęcia.
               </p>
-              <div class="margin-bottom-auto">
+              <div class="margin-top-auto">
                 <div
                   class="width-content margin-auto relative underline-content"
                 >
@@ -234,8 +229,12 @@
 
       <!-- Composition -->
 
-      <section id="composition" class="relative composition" data-composition>
-        <div class="wrapper relative paralax_layer base_layer" id="grup-1">
+      <section
+        id="composition"
+        class="relative paralax-composition min-width-1000"
+        data-composition
+      >
+        <div class="wrapper relative margin-top-200" id="grup-1">
           <div class="header-gredient text-center relative underline-primary">
             Skład w 5 ml
           </div>
@@ -245,7 +244,7 @@
 
           <!-- Columns -->
 
-          <div class="even-columns paralax_layer base_layer">
+          <div class="even-columns">
             <!-- First Column -->
 
             <div>
@@ -398,7 +397,7 @@
 
         <!-- Dog -->
         <div
-          class="relative width-content margin-inline-auto overflow-hidden paralax_layer mid_layer"
+          class="relative width-content margin-inline-auto overflow-hidden paralax-dog"
         >
           <div class="dog-drop-left"></div>
           <div class="dog-drop-right"></div>
@@ -409,9 +408,9 @@
         </div>
       </section>
 
-      <section id="products" data-products class="bg-primary">
+      <section id="products" class="bg-primary min-width" data-products>
         <div class="wrapper wrapper--products">
-          <div class="center">
+          <div class="center margin-bottom-500">
             <div class="products-header fs-select">
               liczba produktów na stronie
             </div>
@@ -420,12 +419,12 @@
 
             <div class="select-conteiner">
               <div class="select">
-                <div class="select-trigger fs-select">
-                  <span data-value="20">20</span>
+                <div class="select-trigger center fs-select">
+                  <div data-value="20">20</div>
                   <img
                     src="/src/images/icons/chevron-down-solid.svg"
                     alt="Wskaźnik"
-                    class="margin-inline-100 transition arrow-select"
+                    class="transition arrow-select"
                     data-icon-select
                   />
                 </div>
@@ -449,7 +448,7 @@
 
           <!-- ProductsContainer -->
 
-          <div id="productsWrapper" class="productsWrapper relative">
+          <div id="productsWrapper" class="min-height-3000 relative">
             <div id="observer" class="productsContainer"></div>
           </div>
         </div>
@@ -457,17 +456,3 @@
     </main>
   </body>
 </html>
-
-<!-- <div class="paralax-wraper">
-        <div class="parallax-grup intro_stren center" id="intro"> header paral</div>
-
-        <div class="parallax-grup relative" id="grup-1">
-          <div class="paralax_layer center base_layer">base layesr</div>
-           <div class="paralax_layer center mid_layer">mid layer</div>
-        </div>  
-        
-        
-        <div class="parallax-grup outro_stren center" id ="autro">end</div>
-      </div> -->
-
-<!-- http://localhost:5173/src/pages/home/new.html -->
