@@ -24,7 +24,7 @@ export class ReprintProducts {
     const products = await Helpers.fetchData(this.#POSTOptions());
     products && new ProductsPrinter(products.data);
 
-    const sections = document.querySelectorAll(".productsContainer");
+    const sections = document.querySelectorAll(".products-container");
 
     const lastSection = sections.item(sections.length - 1);
 

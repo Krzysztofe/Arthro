@@ -28,7 +28,7 @@ export class CustomSelect {
     const target = e.target as HTMLElement;
     const selectedValue = target.getAttribute("data-value");
     const selectedText = target.innerText;
-    const productsElems = document.querySelectorAll(".productsContainer");
+    const productsElems = document.querySelectorAll(".products-container");
 
     const spanElement = this.#triggerEl?.querySelector(
       "[data-value]"

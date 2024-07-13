@@ -64,18 +64,11 @@ export class NavUnderlinePrinter {
   }
 
   #observerCallback(entries: IntersectionObserverEntry[]) {
-
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-
         this.liElems.forEach(liEl => {
           liEl.classList.remove("underline-nav");
           if (entry.target.id === (liEl as HTMLElement).dataset.ref) {
-            console.log("", entry.target.id);
-            console.log(
-              "",
-              entry.target.id === (liEl as HTMLElement).dataset.ref
-            );
             liEl?.classList.add("underline-nav");
           }
         });

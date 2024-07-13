@@ -11,7 +11,7 @@ export class ProductsCreator {
   // #options = { rootMargin: "-100px" };
 
   #options = {
-    rootMargin: "100px",
+    // rootMargin: "100px",
   };
   observer: IntersectionObserver;
 
@@ -33,7 +33,7 @@ export class ProductsCreator {
     };
   }
 
-  async #createProducts(GETOptions: any) {
+  async #createProducts(GETOptions: { url: string }) {
     const loader = new LoadingProductsCreator("#productsWrapper");
     loader.createSpinner();
     const products = await Helpers.fetchData(GETOptions);
@@ -51,6 +51,7 @@ export class ProductsCreator {
   async #observerCallback(entries: IntersectionObserverEntry[]) {
     entries.forEach(async entry => {
       if (entry.isIntersecting) {
+
         await this.#createProducts(this.#firstGEToptions());
         StatePageNumber.number = StatePageNumber.number + 1;
         this.observer.unobserve(entry.target);
@@ -59,9 +60,10 @@ export class ProductsCreator {
   }
 
   observeLastElem() {
-    const sections = document.querySelectorAll(".productsContainer");
+    const sections = document.querySelectorAll(".products-container");
 
     const lastSection = sections.item(sections.length - 1);
+
 
     if (lastSection) {
       this.observer.observe(lastSection);

@@ -208,7 +208,7 @@ button {
 
 .even-columns-4 {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 @media (min-width: 650px) {
@@ -556,6 +556,12 @@ button {
   position: relative;
 }
 
+.bg-img-defaults {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* Navigation Section */
 
 .primary-header {
@@ -676,6 +682,42 @@ button {
   height: 12.2rem;
 }
 
+.drops-left-lg,
+.drops-right-sm,
+.drops-right-lg {
+  aspect-ratio: 1/2;
+}
+
+.drops-left-lg,
+.drops-right-lg {
+  width: 18%;
+}
+
+
+
+.drops-left-lg {
+  position: absolute;
+  top: 68%;
+  left: 0;
+  background-image: url("../src/images/drops/Drops-left-lg.svg");
+}
+
+.drops-right-sm {
+  position: absolute;
+  top: 51%;
+  right: -2%;
+  width: 8%;
+  background-image: url("../src/images/drops/Drops-right-sm.svg");
+}
+
+.drops-right-lg {
+  position: absolute;
+  top: 65%;
+  right: 0;
+  background-image: url("../src/images/drops/Drops-right-lg.svg");
+}
+
+/* --------- */
 .bottles-drop-left,
 .bottles-drop-right {
   aspect-ratio: 1/2;
@@ -859,8 +901,8 @@ button {
   padding-inline: 1rem;
 }
 
-.productsContainer {
-  padding: 0.5rem 2rem;
+.products-container {
+  padding: 1rem 2rem;
 }
 .product-container {
   width: 70vw;
@@ -887,7 +929,7 @@ button {
 }
 
 @media (min-width: 1800px) {
-  .productsContainer {
+  .products-container {
     padding-block: 2.5rem;
   }
 

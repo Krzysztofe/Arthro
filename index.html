@@ -19,13 +19,12 @@
 
     <header class="primary-header center zIndex-5">
       <div class="wrapper wrapper--nav relative center padding-inline-200">
-        
-          <img
-           class="logo"
-            src="/src/images/artrohardLogo/Arthrohard.svg"
-            alt="Arthrohard"
-          />
-       
+        <img
+          class="logo"
+          src="/src/images/artrohardLogo/Arthrohard.svg"
+          alt="Arthrohard"
+        />
+
         <button
           class="mobile-nav-toggle zIndex-1"
           aria-controls="primary-navigation"
@@ -85,8 +84,15 @@
 
     <main class="paralax-wraper">
       <!-- Hero -->
-      <section class="bg-primary">
-        <div class="wrapper padding-block-100 padding-inline-200">
+      <section class="bg-primary relative">
+
+          <div class="bg-img-defaults drops-left-lg"></div>
+          <div class=" bg-img-defaults drops-right-sm"></div>
+          <div class="bg-img-defaults drops-right-lg"></div>
+        <div class="wrapper padding-block-100 padding-inline-200 relative">
+          <!-- <div class="bg-img-defaults drops-left-lg"></div>
+          <div class=" bg-img-defaults drops-right-sm"></div>
+          <div class="bg-img-defaults drops-right-lg"></div> -->
           <div class="even-columns margin-top-200">
             <div class="relative width-content margin-auto">
               <div class="bottles-drop-left"></div>
@@ -443,7 +449,10 @@
           <!-- ProductsContainer -->
 
           <div id="productsWrapper" class="min-height-3000 relative">
-            <div id="observer" class="productsContainer"></div>
+            <div
+              id="products-container"
+              class="products-container even-columns-4 relative"
+            ></div>
           </div>
         </div>
       </section>
