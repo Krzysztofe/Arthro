@@ -4,6 +4,7 @@ import { ProductsCreator } from "./products/productsCreator";
 import { StateReobservEl } from "./states/stateReobservEl";
 import { NavToggle } from "./navigation/navToggle";
 import { PopupProductDetails } from "./products/popupProductDetails";
+import { ImgLoading } from "./imgLoading";
 
 class indexHome {
   constructor() {
@@ -14,7 +15,9 @@ class indexHome {
     observ.observeLastElem();
     StateReobservEl.observRef = observ.reObserveLastElem.bind(observ);
     new PopupProductDetails();
+    new ImgLoading();
   }
 }
 
 new indexHome();
+

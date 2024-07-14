@@ -18,7 +18,7 @@
     <!-- Header -->
 
     <header class="primary-header center zIndex-5">
-      <div class="wrapper wrapper--nav relative center padding-inline-200">
+      <div class="wrapper wrapper-nav relative center padding-inline-200">
         <img
           class="logo"
           src="/src/images/artrohardLogo/Arthrohard.svg"
@@ -45,12 +45,7 @@
         </button>
 
         <nav class="primary-navigation" id="primary-navigation">
-          <ul
-            aria-label="Primary"
-            role="list"
-            class="nav-list"
-            id="primary-navigation"
-          >
+          <ul aria-label="Primary" role="list" class="nav-list">
             <li
               class="cursor-pointer relative margin-block-300"
               data-ref="distinguish"
@@ -91,10 +86,18 @@
         <div class="wrapper padding-block-100 padding-inline-200 relative">
           <div class="even-columns margin-top-200">
             <div class="relative width-content margin-auto">
-              <div class="bottles-drop-left"></div>
-              <div class="bottles-drop-right"></div>
-              <div class="bottles margin-auto relative zIndex-1">
-                <img src="/src/images/A 2.png" alt="Butelki" />
+              <div
+                class="bottles margin-auto relative blur-load blur-animation"
+                style="
+                  background-image: url(/src/images/bottles/favicon-16x16.png);
+                "
+              >
+                <img
+                  src="/src/images/bottles/Group 18.png"
+                  alt="Butelki"
+                  class="img"
+                  loading="lazy"
+                />
               </div>
             </div>
 
@@ -165,11 +168,19 @@
                   <div
                     class="bg-img-defaults drops-top-right drops-top-right-flower"
                   ></div>
-                  <img
-                    class="relative zIndex-1"
-                    src="/src/images/photos/shutterstock_1770486131 1.png"
-                    alt="Kwiat"
-                  />
+
+                  <div
+                    class="relative blur-load blur-animation"
+                    style="
+                      background-image: url(/src/images/photos/favicon-flower.png);
+                    "
+                  >
+                    <img
+                      class="relative zIndex-1"
+                      src="/src/images/photos/shutterstock_1770486131 1.png"
+                      alt="Kwiat"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -204,11 +215,18 @@
                   class="bg-img-defaults drops-top-right drops-top-right-dogs"
                 ></div>
 
-                <img
-                  class="relative zIndex-1"
-                  src="/src/images/photos/Frame 126.png"
-                  alt="Psy"
-                />
+                <div
+                  class="relative blur-load blur-animation"
+                  style="
+                    background-image: url(/src/images/photos/favicon-dogs.png);
+                  "
+                >
+                  <img
+                    class="relative zIndex-1"
+                    src="/src/images/photos/Frame 126.png"
+                    alt="Psy"
+                  />
+                </div>
               </div>
             </div>
 
@@ -239,11 +257,19 @@
                     class="bg-img-defaults drops-top-right drops-top-right-syringe"
                   ></div>
 
-                  <img
+                 <div
+                    class="relative blur-load blur-animation"
+                    style="
+                      background-image: url(/src/images/photos/favicon-syringe.png);
+                    "
+                  >
+                     <img
                     class="relative zIndex-1"
                     src="/src/images/photos/shutterstock_2171764885 1.png"
                     alt="Strzykawka"
                   />
+                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -338,10 +364,13 @@
             <!-- Second Column -->
 
             <div class="margin-auto">
-              <div class="relative width-content margin-auto">
+              <div class="relative width-content margin-auto" >
                 <div class="bottle-drop-left"></div>
                 <div class="bottle-drop-right"></div>
-                <div class="bottle margin-auto relative zIndex-1">
+                <div class="bottle margin-auto relative zIndex-1  blur-load blur-animation"
+                  style="
+                      background-image: url(/src/images/bottle/favicon-bottle.png);
+                    ">
                   <img src="/src/images/bottle/sad 1.png" alt="Butelka" />
                 </div>
               </div>
@@ -395,7 +424,7 @@
                 </div>
               </div>
 
-               <div class="cart-container cart-composition">
+              <div class="cart-container cart-composition">
                 <div class="circle margin-auto"></div>
                 <div class="margin-top-200">
                   <div
@@ -425,7 +454,12 @@
           <div class="dog-drop-left"></div>
           <div class="dog-drop-right"></div>
 
-          <div class="dog margin-auto relative zIndex-1">
+          <div class="dog margin-auto relative zIndex-1 blur-load blur-animation"
+            style="
+                      background-image: url(/src/images/dog/favicon-dog.png);
+                    "
+          >
+            
             <img src="/src/images/dog/piesek 1.png" alt="Pies" />
           </div>
         </div>
@@ -471,7 +505,7 @@
 
           <!-- ProductsContainer -->
 
-          <div id="productsWrapper" class="min-height-4000 relative">
+          <div id="productsWrapper" class="min-height-100vh relative">
             <div
               id="products-container"
               class="products-container even-columns-4 relative"
