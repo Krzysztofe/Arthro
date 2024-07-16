@@ -152,7 +152,6 @@ button {
 
 /* Images Loading */
 
-
 .blur-animation::before {
   content: "";
   position: absolute;
@@ -160,7 +159,6 @@ button {
   background-color: rgba(255, 255, 255, 0.8);
   animation: pulse 2000ms ease-in-out infinite alternate;
 }
-
 
 @keyframes pulse {
   0% {
@@ -175,17 +173,16 @@ button {
   }
 }
 
-
 .blur-load {
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 img {
   object-fit: cover;
 }
 
-
-.blur-load > img  {
+.blur-load > img {
   opacity: 0;
   transition: opacity 200ms ease-in-out;
 }
@@ -290,6 +287,7 @@ img {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  line-height: 1.3;
 }
 
 .header-gredient {
@@ -465,6 +463,10 @@ img {
   margin-top: 0;
 }
 
+.margin-top-100 {
+  margin-top: 1rem;
+}
+
 .-margin-top-200 {
   margin-top: -2rem;
 }
@@ -563,7 +565,7 @@ img {
     max-width: 42rem;
   }
   .cart-elem-height {
-    min-height: 25rem;
+    min-height: 27rem;
   }
 }
 
@@ -688,14 +690,13 @@ img {
     pointer-events: none;
   }
 
-  .wrapper--nav {
+  .wrapper-nav {
     justify-content: center;
   }
 
   .primary-navigation {
     display: block;
     position: fixed;
-    transform: translate(-10%);
     width: 80%;
     padding: var(--size-700);
     inset: 7rem var(--size-400) auto;
@@ -707,7 +708,7 @@ img {
 
   .primary-navigation[data-visible] {
     display: block;
-    margin-top: 25rem;
+    margin-top: 37rem;
   }
 
   .nav-list {
@@ -729,7 +730,7 @@ img {
 }
 
 @media (min-width: 1000px) {
-  .wrapper--nav {
+  .wrapper-nav {
     justify-content: center;
   }
 }
@@ -787,31 +788,6 @@ img {
   }
 }
 
-/* --------- */
-.bottles-drop-left,
-.bottles-drop-right {
-  aspect-ratio: 1/2;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.bottles-drop-left {
-  position: absolute;
-  top: 51%;
-  left: -2%;
-  width: 18%;
-  background-image: url("../src/images/bottle/Vector-left.png");
-}
-
-.bottles-drop-right {
-  position: absolute;
-  top: 31%;
-  left: 71%;
-  width: 31%;
-  background-image: url("../src/images/bottle/Vector-right.png");
-}
-
 .bottles {
   width: 40vw;
   max-width: 62rem;
@@ -819,7 +795,7 @@ img {
 }
 
 .wrapper-hero-column {
-  max-width: 62rem;
+  width: auto;
   padding-inline: 1rem;
 }
 
@@ -835,13 +811,16 @@ img {
   .wrapper-hero-column {
     width: auto;
     padding-inline: 0;
+    padding-right: 2rem;
   }
-  
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1450px) {
   .wrapper-hero {
     padding-block: 6rem;
+  }
+  .wrapper-hero-column {
+    width: 80rem;
   }
 
   .bottles {
@@ -849,21 +828,6 @@ img {
     width: 67rem;
   }
 
-  .bottles::before,
-  .bottles::after {
-    width: 22rem;
-  }
-
-  .bottles::before {
-    left: -9%;
-  }
-  .bottles::after {
-    right: 1%;
-  }
-   .logo-hero {
-    /* width: 42vw; */
-    height: 7.5rem;
-  }
 }
 
 /* <!-- Distinguish --> */
@@ -955,25 +919,26 @@ img {
 .bottle-drop-left,
 .bottle-drop-right {
   aspect-ratio: 1/2;
-  background-size: contain;
+  /* background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
+  background-image: url("../src/images/green-drop.svg");
 }
 
 .bottle-drop-left {
   position: absolute;
   width: 50%;
-  top: 36%;
+  top: 33%;
   left: -8%;
-  background-image: url("../src/images/bottle/Vector-left.png");
+  transform: rotate(38deg);
 }
 
 .bottle-drop-right {
   position: absolute;
   width: 40%;
   top: 29%;
-  left: 67%;
-  background-image: url("../src/images/bottle/Vector-right.png");
+  left: 66%;
+  transform: rotate(38deg);
 }
 
 .bottle {
@@ -996,23 +961,20 @@ img {
 .dog-drop-right {
   width: 29%;
   aspect-ratio: 1/2;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url("../src/images/green-drop.svg");
 }
 
 .dog-drop-left {
   position: absolute;
-  top: 22%;
-  left: 15%;
-  background-image: url("../src/images/dog/Vector-left.png");
+  top: 15%;
+  left: 14%;
 }
 
 .dog-drop-right {
   position: absolute;
-  top: 16%;
-  left: 69%;
-  background-image: url("../src/images/dog/Vector-right.png");
+  top: 7%;
+  left: 66%;
+  transform: rotate(36deg);
 }
 
 .dog {
@@ -1201,9 +1163,8 @@ img {
 .popup-xmark {
   position: absolute;
   top: 0;
-  right: 1.6rem;
+  right: 1rem;
   width: 1.6rem;
-  height: 4rem;
   font-size: var(--fs-600);
 }
 
@@ -1233,14 +1194,13 @@ img {
 .paralax-dog {
   opacity: 0.2;
   position: absolute;
-  bottom: -10rem;
+  bottom: -24rem;
   left: 50%;
   transform: translateZ(-400px) translateX(-20%) scale(4);
-  display: none;
 }
 
 @media (min-width: 750px) {
   .paralax-dog {
-    display: block;
+    bottom: -10rem;
   }
 }

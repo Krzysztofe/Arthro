@@ -23,6 +23,7 @@
           class="logo"
           src="/src/images/artrohardLogo/Arthrohard.svg"
           alt="Arthrohard"
+          loading="lazy"
         />
 
         <button
@@ -34,11 +35,13 @@
             src="/src/images/icons/bars-solid.svg"
             alt="Hamburger"
             class="icon-hamburger cursor-pointer"
+            loading="lazy"
           />
           <img
             src="/src/images/icons/xmark-solid.svg"
             alt="Krzyżyk"
             class="icon-xmark cursor-pointer"
+            loading="lazy"
           />
 
           <span class="visually-hidden">Menu</span>
@@ -80,7 +83,10 @@
     <main class="paralax-wraper">
       <!-- Hero -->
       <section class="bg-primary relative padding-block-500">
-        <div class="bg-img-defaults drops-left-lg"></div>
+        <div class="bg-img-defaults drops-left-lg">
+
+          
+        </div>
         <div class="bg-img-defaults drops-right-sm"></div>
         <div class="bg-img-defaults drops-right-lg"></div>
         <div class="wrapper padding-block-100 padding-inline-200 relative">
@@ -95,7 +101,7 @@
                 <img
                   src="/src/images/bottles/Group 18.png"
                   alt="Butelki"
-                  class="img"
+                  class="relative"
                   loading="lazy"
                 />
               </div>
@@ -110,6 +116,7 @@
                 class="logo-hero margin-bottom-200"
                 src="/src/images/artrohardLogo/Arthrohard.svg"
                 alt="Arthrohard"
+                loading="lazy"
               />
 
               <p class="subtitle-gradient margin-bottom-200">
@@ -117,7 +124,7 @@
                 <br />
                 na wsparcie stawów dla psa i kota
               </p>
-              <p class="margin-bottom-150 max-width-4600">
+              <p class="margin-bottom-150">
                 Arthrohard to dobrze przyswajalny suplement diety w formie
                 syropu, stworzony z myślą o zdrowiu stawów Twojego psa lub kota
               </p>
@@ -179,6 +186,7 @@
                       class="relative zIndex-1"
                       src="/src/images/photos/shutterstock_1770486131 1.png"
                       alt="Kwiat"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -225,6 +233,7 @@
                     class="relative zIndex-1"
                     src="/src/images/photos/Frame 126.png"
                     alt="Psy"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -257,19 +266,19 @@
                     class="bg-img-defaults drops-top-right drops-top-right-syringe"
                   ></div>
 
-                 <div
+                  <div
                     class="relative blur-load blur-animation"
                     style="
                       background-image: url(/src/images/photos/favicon-syringe.png);
                     "
                   >
-                     <img
-                    class="relative zIndex-1"
-                    src="/src/images/photos/shutterstock_2171764885 1.png"
-                    alt="Strzykawka"
-                  />
+                    <img
+                      class="relative zIndex-1"
+                      src="/src/images/photos/shutterstock_2171764885 1.png"
+                      alt="Strzykawka"
+                      loading="lazy"
+                    />
                   </div>
-                 
                 </div>
               </div>
             </div>
@@ -364,14 +373,20 @@
             <!-- Second Column -->
 
             <div class="margin-auto">
-              <div class="relative width-content margin-auto" >
-                <div class="bottle-drop-left"></div>
-                <div class="bottle-drop-right"></div>
-                <div class="bottle margin-auto relative zIndex-1  blur-load blur-animation"
+              <div class="relative width-content margin-auto">
+                <div class="bottle-drop-left bg-img-defaults"></div>
+                <div class="bottle-drop-right bg-img-defaults"></div>
+                <div
+                  class="bottle margin-auto relative zIndex-1 blur-load blur-animation"
                   style="
-                      background-image: url(/src/images/bottle/favicon-bottle.png);
-                    ">
-                  <img src="/src/images/bottle/sad 1.png" alt="Butelka" />
+                    background-image: url(/src/images/bottle/favicon-bottle.png);
+                  "
+                >
+                  <img
+                    src="/src/images/bottle/sad 1.png"
+                    alt="Butelka"
+                    loading="lazy"
+                  />
                 </div>
               </div>
 
@@ -451,16 +466,14 @@
         <div
           class="relative width-content margin-inline-auto overflow-hidden paralax-dog"
         >
-          <div class="dog-drop-left"></div>
-          <div class="dog-drop-right"></div>
+          <div class="dog-drop-left bg-img-defaults"></div>
+          <div class="dog-drop-right bg-img-defaults"></div>
 
-          <div class="dog margin-auto relative zIndex-1 blur-load blur-animation"
-            style="
-                      background-image: url(/src/images/dog/favicon-dog.png);
-                    "
+          <div
+            class="dog margin-auto relative zIndex-1 blur-load"
+        
           >
-            
-            <img src="/src/images/dog/piesek 1.png" alt="Pies" />
+            <img src="/src/images/dog/piesek 1.png" alt="Pies" loading="lazy" />
           </div>
         </div>
       </section>
@@ -483,6 +496,7 @@
                     alt="Wskaźnik"
                     class="transition arrow-select"
                     data-icon-select
+                    loading="lazy"
                   />
                 </div>
                 <div class="options transition zIndex-1 fs-select">

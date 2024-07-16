@@ -34,14 +34,14 @@ export class PopupProductDetails {
      <img id = "xmark"
              src=${Icon}
              alt="Krzyżyk"
-             class="popup-xmark cursor-pointer"
+             class="popup-xmark cursor-pointer margin-top-100"
            />
               
         <div>ID: ${id}</div>
        <div>Nazwa: ${name}</div>
        <div>Wartość: ${value}</div>`;
     this.#popupContainerEl.append(this.#innerContainerEl);
-    // this.#createIconXmark();
+   
   }
 
   #createPopupContainetr() {

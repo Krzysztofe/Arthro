@@ -1,37 +1,46 @@
 export class NavUnderlinePrinter {
-  liElems = document.querySelectorAll("[data-ref]");
-  #sections = document.querySelectorAll("section");
-
-  #options = {
-    rootMargin: "-100px 0px -100px 0px",
-  };
-
-  observer: IntersectionObserver;
+  #paralaxWraperEl = document.querySelector(".paralax-wraper") as HTMLElement;
+  #liElems = document.querySelectorAll("[data-ref]");
+  #sectionsElems = document.querySelectorAll("section");
+  #throttleTimeout: number | null = null;
 
   constructor() {
-    this.observer = new IntersectionObserver(
-      this.#observerCallback.bind(this),
-      this.#options
-    );
-    this.#observeSections();
+    this.#scrollEvent();
   }
 
-  #observerCallback(entries: IntersectionObserverEntry[]) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        this.liElems.forEach(liEl => {
-          liEl.classList.remove("underline-nav");
-          if (entry.target.id === (liEl as HTMLElement).dataset.ref) {
-            liEl.classList.add("underline-nav");
-          }
-        });
+  #handleScroll() {
+    let currentSection = "distinguish";
+
+    this.#sectionsElems.forEach(sectionEl => {
+      if (this.#paralaxWraperEl?.scrollTop >= sectionEl.offsetTop) {
+        currentSection = sectionEl.id;
+      }
+    });
+
+    this.#liElems.forEach(liEl => {
+      const ref = (liEl as HTMLElement).dataset.ref;
+      if (ref === currentSection) {
+        liEl.classList.add("underline-nav");
+      } else {
+        liEl.classList.remove("underline-nav");
       }
     });
   }
 
-  #observeSections() {
-    this.#sections.forEach(section => {
-      this.observer.observe(section);
-    });
+  #throttle(fn: () => void) {
+    return () => {
+      if (this.#throttleTimeout !== null) return;
+      this.#throttleTimeout = window.setTimeout(() => {
+        fn();
+        this.#throttleTimeout = null;
+      }, 500);
+    };
+  }
+
+  #scrollEvent() {
+    this.#paralaxWraperEl?.addEventListener(
+      "scroll",
+      this.#throttle(this.#handleScroll.bind(this))
+    );
   }
 }

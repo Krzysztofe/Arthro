@@ -4,7 +4,7 @@ import { ProductsCreator } from "./products/productsCreator";
 import { StateReobservEl } from "./states/stateReobservEl";
 import { NavToggle } from "./navigation/navToggle";
 import { PopupProductDetails } from "./products/popupProductDetails";
-import { ImgLoading } from "./imgLoading";
+import { ImgLoading } from "../../components/imgLoading";
 
 class indexHome {
   constructor() {
