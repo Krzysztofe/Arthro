@@ -6,22 +6,12 @@ import { StatePageNumber } from "../states/statePageNumber";
 import { StateProductsPerPage } from "../states/stateProductsPerPage";
 
 export class ProductsCreator {
-  // #options = { threshold: 0.9 };
-
-  // #options = { rootMargin: "-100px" };
-
-  #options = {
-    // rootMargin: "100px",
-  };
-  observer: IntersectionObserver;
+  #observer: IntersectionObserver;
 
   #firstSectionCreated = false;
 
   constructor() {
-    this.observer = new IntersectionObserver(
-      this.#observerCallback.bind(this),
-      this.#options
-    );
+    this.#observer = new IntersectionObserver(this.#observerCallback.bind(this));
     this.observeLastElem();
   }
 
@@ -51,10 +41,9 @@ export class ProductsCreator {
   async #observerCallback(entries: IntersectionObserverEntry[]) {
     entries.forEach(async entry => {
       if (entry.isIntersecting) {
-
         await this.#createProducts(this.#firstGEToptions());
         StatePageNumber.number = StatePageNumber.number + 1;
-        this.observer.unobserve(entry.target);
+        this.#observer.unobserve(entry.target);
       }
     });
   }
@@ -64,13 +53,12 @@ export class ProductsCreator {
 
     const lastSection = sections.item(sections.length - 1);
 
-
     if (lastSection) {
-      this.observer.observe(lastSection);
+      this.#observer.observe(lastSection);
     }
   }
 
   reObserveLastElem(element: HTMLElement) {
-    this.observer.observe(element);
+    this.#observer.observe(element);
   }
 }
