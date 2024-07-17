@@ -827,7 +827,6 @@ img {
     height: 81rem;
     width: 67rem;
   }
-
 }
 
 /* <!-- Distinguish --> */
@@ -919,9 +918,6 @@ img {
 .bottle-drop-left,
 .bottle-drop-right {
   aspect-ratio: 1/2;
-  /* background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center; */
   background-image: url("../src/images/green-drop.svg");
 }
 
