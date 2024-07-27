@@ -8,7 +8,6 @@ import { StateProductsPerPage } from "../states/stateProductsPerPage";
 export class ProductsCreator {
   #observer: IntersectionObserver;
 
-  #firstSectionCreated = false;
 
   constructor() {
     this.#observer = new IntersectionObserver(this.#observerCallback.bind(this));
@@ -31,10 +30,6 @@ export class ProductsCreator {
       new ProductsPrinter(products.data);
     }
     loader.removeSpinner();
-
-    if (!this.#firstSectionCreated) {
-      this.#firstSectionCreated = true;
-    }
     this.observeLastElem();
   }
 
@@ -58,7 +53,4 @@ export class ProductsCreator {
     }
   }
 
-  reObserveLastElem(element: HTMLElement) {
-    this.#observer.observe(element);
-  }
 }

@@ -15,7 +15,6 @@ export class NavToggle {
   #handleNavToggle() {
     if (this.#primaryNavEl?.hasAttribute("data-visible")) {
       this.#navToggleEl?.setAttribute("aria-expanded", "false");
-
       this.#mainEl && (this.#mainEl.style.pointerEvents = "all");
     } else {
       this.#navToggleEl?.setAttribute("aria-expanded", "true");

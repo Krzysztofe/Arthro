@@ -13,7 +13,7 @@ class indexHome {
     new CustomSelect();
     const observ = new ProductsCreator();
     observ.observeLastElem();
-    StateReobservEl.observRef = observ.reObserveLastElem.bind(observ);
+    StateReobservEl.observRef = observ.observeLastElem.bind(observ);
     new PopupProductDetails();
     new ImgLoading();
   }

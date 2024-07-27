@@ -23,13 +23,7 @@ export class ReprintProducts {
     loader.createSpinner();
     const products = await Helpers.fetchData(this.#POSTOptions());
     products && new ProductsPrinter(products.data);
-
-    const sections = document.querySelectorAll(".products-container");
-
-    const lastSection = sections.item(sections.length - 1);
-
-    lastSection && StateReobservEl.observRef(lastSection);
-
+    StateReobservEl.observRef && StateReobservEl.observRef();
     loader.removeSpinner();
   }
 }

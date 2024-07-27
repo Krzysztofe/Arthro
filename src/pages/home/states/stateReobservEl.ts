@@ -1,4 +1,3 @@
 export class StateReobservEl {
-  static observRef:any = null;
- 
+  static observRef: (() => void) | null = null;
 }

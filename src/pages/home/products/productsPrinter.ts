@@ -27,6 +27,7 @@ export class ProductsPrinter {
       this.#productsContainerEl?.append(divEl);
     });
   }
+  
   #createProductsContainer() {
     this.#productsContainerEl.classList.add(
       "even-columns-4",

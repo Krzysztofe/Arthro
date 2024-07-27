@@ -7,7 +7,6 @@ export class ImgLoading {
   }
 
 
-
   #handleLoad(div: HTMLElement, img: HTMLElement) {
     img && (img.style.opacity = "1");
     div.classList.remove("blur-animation");
